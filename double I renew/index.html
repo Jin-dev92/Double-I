@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double I</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- <script src="http://releases.flowplayer.org/5.3/flowplayer.min.js"></script> -->
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <div class="body">
+<div class="overlay" ></div>
+    <div class="strip_body"><img src="assets/image/strip.png" class="strip" border="0" style="position:absolute; top:0; left:0;"></div>
+    <div class="strip_body"><img src="assets/image/strip.png" class="strip" border="0" style="position:absolute; top:0; left:0;"></div>
+    <img src="assets/image/logo_white.png" class="logo" style="z-index:5; opacity:0; animation-name:logo; animation-duration:1s;">
+
+
+      <p class="slo slogan" >Contact, Detect, Perfect</p>
+      <p class="slo slogan_u" >We, wanting to be the very piece you need,</p>
+      <p class="slo slogan_d" >will be the one piece of you, the beautiful one.</p>
+
+
+
+<!-- <div class="flowplayer"> -->
+  <video src="assets/image/test.webm" loop="true" autoplay style=" position:fixed; z-index:-10; top:0;left:0;" muted="true"></video>
+  <video src="assets/image/webm 1.mp4" loop="true" autoplay style=" position:fixed; z-index:-10; top:0;left:0;" muted="true"></video>
+<!-- </div> -->
+    <script type="text/javascript">
+          $(function(){
+            $('.btn').animate({
+              opacity:0.1
+            },2000,null,function (){
+              $('.btn').animate({opacity:1},2000);
+            });
+
+            $('.logo').animate({
+                  "opacity":"1"
+            },1500);
+            $('.slogan').animate({
+                  "opacity":"1"
+            },1500);
+            $('.slogan_u').animate({
+                  "opacity":"1"
+            },1500);
+            $('.slogan_d').animate({
+                  "opacity":"1"
+            },1500);
+              $('.trans0,.trans0_2,.trans0_3').mouseenter(function(){
+                    $('.slo').addClass('on');
+                    $('.logo').attr('src','assets/image/logo.png');
+              });
+              $('.trans0,.trans0_2,.trans0_3').mouseleave(function(){
+                    $('.slo').removeClass('on');
+                   $('.logo').attr('src','assets/image/logo_white.png');
+              });
+        $('.trans1').mouseenter(function(){
+          $('.over1_w').attr('src','assets/image/Button/Contact_b.png');
+          });
+        $('.trans1').mouseleave(function(){
+
+         $('.over1_w').attr('src','assets/image/Button/Contact.png');
+    });
+  $('.trans2,.trans2_2').mouseenter(function(){
+  $('.over2_w').attr('src','assets/image/Button/Design_b.png');
+  });
+$('.trans2,.trans2_2').mouseleave(function(){
+
+ $('.over2_w').attr('src','assets/image/Button/Design.png');
+});
+$('.trans3').mouseenter(function(){
+  $('.over3_w').attr('src','assets/image/Button/Consulting_b.png');
+  });
+$('.trans3').mouseleave(function(){
+ $('.over3_w').attr('src','assets/image/Button/Consulting.png');
+});
+$('.trans4').mouseenter(function(){
+  $('.over4_w').attr('src','assets/image/Button/Publishing_b.png');
+  });
+$('.trans4').mouseleave(function(){
+ $('.over4_w').attr('src','assets/image/Button/Publishing.png');
+});
+$('.trans5,.trans5_2').mouseenter(function(){
+  $('.over5_w').attr('src','assets/image/Button/who we are_b.png');
+  });
+$('.trans5,.trans5_2').mouseleave(function(){
+ $('.over5_w').attr('src','assets/image/Button/who we are.png');
+});
+$('.trans6').mouseenter(function(){
+  $('.over6_w').attr('src','assets/image/Button/Board_b.png');
+  });
+$('.trans6').mouseleave(function(){
+
+ $('.over6_w').attr('src','assets/image/Button/Board.png');
+});
+$('.trans7,.trans7_2,.trans7_3,.trans7_4').mouseenter(function(){
+  $('.over7_w').attr('src','assets/image/Button/Marketing_b.png');
+  });
+$('.trans7,.trans7_2,.trans7_3,.trans7_4').mouseleave(function(){
+
+ $('.over7_w').attr('src','assets/image/Button/Marketing.png');
+});
+
+          });
+
+    </script>
+    <script type="text/javascript">
+        function openCate(dom) {
+          var area= dom;
+              $('.logo').css('display','none');
+              $('.slo').css('display','none');
+
+              if (area == 'trans1') {
+                $('.contact_menu:hidden').toggle(1000);
+                $('.over1_w_menu:hidden').toggle();
+                $('.contact_inner:hidden').fadeIn('fast');
+                $('.contact_main').delay(500).fadeIn(2000);
+                $('.contact_type').delay(1000).fadeIn(2000);
+                $('.contact_input').delay(1400).fadeIn(2000);
+                $('.contact_inner_btn').delay(1400).fadeIn(2000);
+                $('.contact_span').delay(1600).fadeIn(2000);
+                $('.contact_arrow').delay(1800).fadeIn(2000);
+              }
+              if (area == 'trans2' || area == 'trans2_2') {
+                $('.design_menu:hidden').toggle(1000);
+              }
+              if (area == 'trans3') {
+                $('.consulting_menu:hidden').toggle(1000);
+              }
+              if (area == 'trans4') {
+                $('.publishing_menu:hidden').toggle(1000);
+                $('.over4_w_menu:hidden').toggle();
+                $('.publishing_main').delay(500).fadeIn(2000);
+
+              }
+              if (area == 'trans5' || area == 'trans5_2') {
+                $('.wwa_menu:hidden').toggle(1000);
+              }
+              if (area == 'trans6') {
+                $('.board_menu:hidden').toggle(1000);
+              }
+              if (area == 'trans7' || area == 'trans7_2' || area == 'trans7_3' || area == 'trans7_4') {
+                $('.marketing_menu:hidden').toggle(1000);
+              }
+
+        }
+    </script>
+<style media="screen">
+  @keyframes downMoving {
+    0%{top:-10%;}
+    100%{transform: translateY(0px);}
+  }
+  @keyframes upMoving {
+    0%{top:100%;}
+    100%{transform: translateY(0px);}
+  }
+
+  @keyframes logo {
+    0%{top:450px;}
+    100%{transform: translateY(0px);}
+  }
+  @keyframes slogan {
+    0%{opacity: 0;}
+    100%{opacity:1;}
+  }
+  @keyframes upSlogan {
+    0%{top:800px; }
+    100%{transform: translateY(0px);}
+  }
+  @keyframes downSlogan {
+    0%{top:820px; }
+    100%{transform: translateY(0px);}
+  } /*keyframe*/
+</style>
+    <div class="trans0" ></div>
+    <div class="trans0_2"></div>
+    <div class="trans0_3"></div>
+
+    <div class="trans1"  onclick="javascript:openCate(this.className);"></div>
+
+    <div class="trans2"  onclick="javascript:openCate(this.className);"></div>
+    <div class="trans2_2"  onclick="javascript:openCate(this.className);"></div>
+
+    <div class="trans3"  onclick="javascript:openCate(this.className);"></div>
+
+    <div class="trans4"  onclick="javascript:openCate(this.className);"></div>
+
+    <div class="trans5"  onclick="javascript:openCate(this.className);" ></div>
+    <div class="trans5_2"  onclick="javascript:openCate(this.className);"></div>
+
+    <div class="trans6"  onclick="javascript:openCate(this.className);"></div>
+
+    <div class="trans7"  onclick="javascript:openCate(this.className);"></div>
+    <div class="trans7_2"  onclick="javascript:openCate(this.className);"></div>
+    <div class="trans7_3"  onclick="javascript:openCate(this.className);"></div>
+    <div class="trans7_4"  onclick="javascript:openCate(this.className);"></div>
+
+    <!-- over -->
+
+
+    <img src="assets/image/strip/main_strip.png" alt="main_logo" style="position:absolute; top:0; left:0; width:1920px; height: 975px; z-index:0;  " class="main_over over0">
+    <img src="assets/image/strip/contact_strip.png" alt="contact" style="position:absolute; top:0; left:0; width:1920px; height: 975px; z-index:0; " class="main_over over1">
+    <img src="assets/image/strip/design_strip.png" alt="design" style="position:absolute; top:0; left:0; width:1920px; height: 975px; z-index:0; " class="main_over over2">
+    <img src="assets/image/strip/board_strip.png" alt="board" style="position:absolute; top:0; right:0;  z-index:0; width:1920px; height:975px; " class="main_over over3">
+    <img src="assets/image/strip/pub_strip.png" alt="publishing" style="position:absolute; top:0; left:0; width:1920px; height: 975px; z-index:0; " class="main_over over4">
+    <img src="assets/image/strip/consulting_strip.png" alt="consulting" style="position:absolute; top:0; left:0; width:1920px; height:975px; z-index:0; " class="main_over over5">
+    <img src="assets/image/strip/wwa_strip.png" alt="who we are" style="position:absolute; top:0; left:0; width:1920px; height:975px; z-index:0; " class="main_over over6">
+    <img src="assets/image/strip/marketing_strip.png" alt="marketing" style="position:absolute; top:0; left:0; width:1920px; height: 975px; z-index:0; " class="main_over over7">
+
+
+
+      <!-- <img src="assets/image/Button/Board.png" alt="board_btn" style="position:absolute; top:0; left:0; z-index:0;" class="over1_w">
+      <img src="assets/image/Button/Consulting.png" alt="consulting_btn" style="position:absolute; top:0; left:0; z-index:0;" class="ove2r_w">
+      <img src="assets/image/Button/Contact.png" alt="contact_btn" style="position:absolute; top:0; left:0; z-index:0;" class="over3_w">
+      <img src="assets/image/Button/Design.png" alt="design_btn" style="position:absolute; top:0; left:0; z-index:0;" class="over4_w">
+      <img src="assets/image/Button/Marketing.png" alt="marketing_btn" style="position:absolute; top:0; left:0; z-index:0;"  class="over5_w">
+      <img src="assets/image/Button/Publishing.png" alt="publishing_btn" style="position:absolute; top:0; left:0; z-index:0;" class="over6_w">
+      <img src="assets/image/Button/Who we are.png" alt="who we are_btn" style="position:absolute; top:0; left:0; z-index:0;" class="over7_w"> -->
+
+      <img src="assets/image/Button/Contact.png" alt="contact_btn" style="position:absolute; top:10%; left:35%; z-index:0; opacity:1" class="btn over1_w" >
+      <img src="assets/image/Button/Design.png" alt="design_btn" style="position:absolute; right:30%; top:20%; z-index:0; opacity:1;" class="btn over2_w">
+      <img src="assets/image/Button/Consulting.png" alt="consulting_btn" style="position:absolute; right:5%; top:75%; z-index:0; opacity:1;" class="btn over3_w">
+      <img src="assets/image/Button/Publishing.png" alt="publishing_btn" style="position:absolute; top:85%; right:29%; z-index:0; opacity:1;" class="btn over4_w">
+      <img src="assets/image/Button/Who we are.png" alt="who we are_btn" style="position:absolute; left:23%; top:76%; z-index:0; opacity:1;" class="btn over5_w">
+      <img src="assets/image/Button/Board.png" alt="board_btn" style="position:absolute; left:5%; top:65%; z-index:0; opacity:1;" class="btn over6_w">
+      <img src="assets/image/Button/Marketing.png" alt="marketing_btn" style="position:absolute; top:30%; left:10%; z-index:0;  opacity:1;"  class="btn over7_w">
+      <img src="assets/image/footer.png" alt="" style="z-index:0; position:absolute; top:87%; left:10%; ">
+      <script type="text/javascript">
+        function overOut(dom){
+          var name=dom;
+          // contact_arrow
+          $('.'+name.split('_')[0]+'_menu').fadeOut(1000);
+          $(".logo").toggle();
+          $('.logo').css({
+            "animation-name":"logo",
+            "animation-duration":"1s"
+          });
+          $('.slogan_u').toggle();
+          $('.slogan_d').toggle();
+          // $('.slogan').fadeIn(10000);
+
+          $('.slogan').toggle();
+          $('.slogan_u').css({
+            "animation-name":"upSlogan",
+            "animation-duration":"1s"
+          });
+          $('.slogan_d').css({
+            "animation-name":"downSlogan",
+            "animation-duration":"1s"
+          });
+          $('.slogan').css({
+            "animation-name":"slogan",
+            "animation-duration":"4s"
+          });
+        }
+      </script>
+      <!-- contact-menu -->
+      <style media="screen">
+        .menu{position:absolute; top:0; left:0;  width:100%; height:100%; z-index:1; display:none; opacity:0.95;}
+        .contact_type{animation-name: downMoving; animation-duration: 2s;}
+        .contact_frm{animation-duration: 4s;}
+      </style>
+      <div class="contact_menu" style="width:1920px; height:100%; display:none;" >
+        <img src="assets/image/Contact_menu.png"  style="position:absolute; top:0; left:0;  width:100%; height:100%; z-index:1; display:none; opacity:0.95;" class="over1_w_menu menu" >
+        <img src="assets/image/Button/arrow.png" alt="" style="position:absolute; top:0; left:2%; z-index:10; filter:invert(); transform:rotate(180deg); cursor:pointer; display:none;" onclick="overOut(this.className)" class="contact_arrow">
+        <p style="color:white; z-index:1000; position:absolute; top:20%; right:10%; font-size:130px; display:none;" class="contact_main">Contact</p>
+
+        <div class="contact_inner" style="width:1000px; height:400px; position:absolute; top:50%; right:0; z-index:1000; display:none;" >
+                <span style="float:right; margin-right:10%; display:none;" class="contact_span">
+                <span style="color:white; font-size:20px;">1</span>
+                <span style="color:rgba(255,255,255,.4);; font-size:20px; margin-left:30px;">/</span>
+                <span style="color:rgba(255,255,255,.4);; font-size:20px; margin-left:30px;">4</span>
+                </span>
+                <p style="position:relative; font-size:50px; color:white; display:none; top:0%; " class="contact_type">Type, what you need.</p>
+                <form class="" action="index.html" method="post" class="contact_frm" style="display:;">
+                      <input type="text" class="contact_input" value placeholder="Type here..." style="position:absolute; width:60%; top:50%; background-color:inherit; color:white; border:none; border-bottom:1px solid rgba(255,255,255,.4);display:none; ">
+                </form>
+                <button class="contact_inner_btn" style=" display:none; position:absolute; width:140px; height:46px; right:10%; top:70%; border:1px solid rgba(255,255,255,.4);; padding-right:0px; background-color:inherit; color:white; font-size:18px; letter-spacing:10px; text-align:center;" onclick="changeText()" >Next</button>
+        </div>
+      </div>
+
+      <!-- <div class="design_menu" style="width:1920px; height:100%;">
+        <img src="assets/image/design_menu.png" class="over2_w_menu menu" style="display:block;">
+      </div> -->
+      <!-- <img src="assets/image/.png"  style="position:absolute; right:0; top:0; z-index:0; display:none;" class="over2_w_menu"> -->
+      <div class="design_menu" style="width:1920px; height:100%; display:none;">
+        <img src="assets/image/design_menu.png"  class="over2_w_menu menu" >
+        <img src="assets/image/Button/arrow.png"  style="position:absolute; top:0; left:2%; z-index:10; filter:invert(); transform:rotate(180deg); cursor:pointer; display:;" onclick="overOut(this.className)" class="design_arrow">
+        <p style="color:white; z-index:1000; position:absolute; top:20%; right:10%; font-size:130px; display:none;" class="design_main">Design</p>
+      </div>
+
+      <div class="consulting_menu" style="width:1920px; height:100%; display:none;">
+        <img src="assets/image/consulting_menu.png"  class="over3_w_menu menu" >
+        <img src="assets/image/Button/arrow.png"  style="position:absolute; top:0; left:2%; z-index:10; filter:invert(); transform:rotate(180deg); cursor:pointer; display:;" onclick="overOut(this.className)" class="consulting_arrow">
+        <p style="color:white; z-index:1000; position:absolute; top:20%; right:10%; font-size:130px; display:none;" class="consulting_main">Consulting</p>
+      </div>
+
+
+<div class="publishing_menu" style="width:1920px; height:100%; display:none;">
+  <img src="assets/image/publishing_menu.png"  class="over4_w_menu menu" >
+  <img src="assets/image/Button/arrow.png"  style="position:absolute; top:0; left:2%; z-index:10; filter:invert(); transform:rotate(180deg); cursor:pointer; display:;" onclick="overOut(this.className)" class="publishing_arrow">
+  <p style="color:white; z-index:1000; position:absolute; top:20%; right:10%; font-size:130px; display:none;" class="publishing_main">Publising</p>
+</div>
+
+<div class="wwa_menu" style="width:1920px; height:100%; display:none;">
+  <img src="assets/image/wwa_menu.png"  class="over5_w_menu menu">
+  <img src="assets/image/Button/arrow.png"  style="position:absolute; top:0; left:2%; z-index:10; filter:invert(); transform:rotate(180deg); cursor:pointer; display:;" onclick="overOut(this.className)" class="wwa_arrow">
+  <p style="color:white; z-index:1000; position:absolute; top:20%; right:10%; font-size:130px; display:none;" class="wwa_main"></p>
+</div>
+
+<div class="board_menu" style="width:1920px; height:100%; display:none;">
+  <img src="assets/image/board_menu.png"  class="over6_w_menu menu">
+  <img src="assets/image/Button/arrow.png"  style="position:absolute; top:0; left:2%; z-index:10; filter:invert(); transform:rotate(180deg); cursor:pointer; display:;" onclick="overOut(this.className)" class="board_arrow">
+  <p style="color:white; z-index:1000; position:absolute; top:20%; right:10%; font-size:130px; display:none;" class="board_main"></p>
+</div>
+
+<div class="marketing_menu" style="width:1920px; height:100%; display:none;">
+  <img src="assets/image/marketing_menu.png"  class="over7_w_menu menu">
+  <img src="assets/image/Button/arrow.png"  style="position:absolute; top:0; left:2%; z-index:10; filter:invert(); transform:rotate(180deg); cursor:pointer; display:;" onclick="overOut(this.className)" class="marketing_arrow">
+  <p style="color:white; z-index:1000; position:absolute; top:20%; right:10%; font-size:130px; display:none;" class="marketing_main"></p>
+</div>
+
+      <!-- <img src="assets/image/.png"  style="position:absolute; left:0; top:0; z-index:0; display:none;" class="over6_w_menu"> -->
+      <!-- <img src="assets/image/.png"  style="position:absolute; top:0; left:0; z-index:0; display:none;"  class="over7_w_menu"> -->
+
+
+
+  </div>
+</body>
+
+</html>

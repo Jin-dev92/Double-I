@@ -1,0 +1,58 @@
+body,html{width: 100%; height: 100%; overflow: hidden;}
+.overlay{width: 1920px; height:975px; z-index:-9; position: fixed; left:0; top:0; overflow-x: hidden; background-color: rgba(0,0,0,0.4); overflow-y: hidden;}
+.body{width: 1920px; height: 975px;  background-repeat: no-repeat; margin: 0 auto; background-size: 100% 100%; position: relative; overflow: hidden; }
+.logo{position: absolute; z-index: 0; top:50%; left: 50%; transition-delay: 0; margin-left: -85.5px; margin-top: -83.5px; }
+.main_logos{width: 1920px; height: 975px; position: relative;}
+.slogan{position: absolute; top:0; left:0;transition-delay: 0.1s; font-size: 30pt; transition-duration: 1s; font-family: ProximalNova; color: white; font-weight: bold; z-index: 1; color: #FFFFFF; top:64%;  font-size: 36px;  margin-left: 758px; }
+.slogan_u{position: absolute;  left:0;font-size: 12pt; font-family: ProximalNova; z-index: 1; color: #FFFFFF;  top:71%; animation-name: upSlogan; animation-duration: 1s; margin-left: 800px;}
+.slogan_d{ position: absolute;  left:0;font-size: 12pt; font-family: ProximalNova; z-index:1; color: #FFFFFF;  top:73%; animation-name: downSlogan; animation-duration: 1s; margin-left: 788px;}
+.strip_body{width: 1920px; height: 975px; margin: 0 auto; position: relative; z-index: 1; }
+.strip_body img{width: 1920px; height: 975px; z-index: -1;}
+.main_over{display: none;}
+
+.trans0{position: absolute;width: 530px;height: 540px; top: 535px; left: 508px; transform:rotate(-36.5deg) skew(8.6deg, 0deg); z-index: 10;opacity: 0.5;transform-origin:0% 0%;}
+.trans0_2{position: absolute;width: 550px;height: 450px; top: 270px; left: 890px; transform:rotate(-36.5deg) skew(0deg, 16deg); z-index: 10;opacity: 0.5;transform-origin:100% 100%;z-index: 1;}
+.trans0_3{position: absolute;width: 430px;height: 500px; top: 155px; left: 1018px; transform:rotate(53.2deg) skew(0deg, 0deg); z-index: 10;opacity: 0.5;transform-origin:0% 0%;}
+.trans1{position: absolute;width: 393px;height: 458px; top: 0;left: 368px;transform: skew(30deg, -36.5deg) scale(1,0.975); transform-origin:0% 0%;z-index: 10}
+.trans2{position: absolute;width: 893px;height: 525px; top: 155px;left: 1019px;transform:rotate(-36.5deg); transform-origin:0% 0%; z-index: 10;}
+.trans2_2{position: absolute;width: 593px;height: 805px;top: 885px;left: 1557px;transform:rotate(-126.4deg) skew(27.5deg); transform-origin:0% 0%;z-index: 10;}
+.trans3{position: absolute;width: 693px;height: 505px; top: 885px;left: 1557px;transform:rotate(-35.4deg) skew(0deg,-28.5deg); transform-origin:0% 0%; z-index: 10;}
+.trans4{position: absolute;width: 576px;height: 505px; top: 920px;left: 893px;transform:rotate(-20.4deg) skew(16deg,-0deg); transform-origin:0% 0%; z-index: 10;}
+.trans5{position: absolute;width: 400px;height: 705px;top: 535px;left: 506px;transform:rotate(8deg)skew(-45deg,37deg); transform-origin:0% 0%;opacity: 0.5; z-index: 10;}
+.trans5_2{position: absolute;width: 400px;height: 305px;top: 920px;left: 894px;transform:rotate(160deg)skew(25.5deg,0deg); transform-origin:0% 0%;opacity: 0.5; z-index: 9;}
+.trans6{position: absolute;width: 428px;height: 618px;top: 612px;left: -27px;transform:rotate(26.5deg)skew(-26.5deg,-9.5deg); transform-origin:100% 0%;opacity: 0.5;z-index: 10}
+.trans7{position: absolute;width: 235px;height: 485px;top: -20px;left: -70px;transform:rotate(0deg)skew(-23.5deg,16.9deg); opacity: 0.5;transform-origin:0% 100%;}
+.trans7_2{position: absolute;width: 205px;height: 515px;top: 0px;left: 130px;transform:rotate(-30deg)skew(-0deg,30deg); opacity: 0.5;transform-origin:0% 0%;}
+.trans7_3{position: absolute;width: 205px;height: 515px;top: 0px;left: 130px;transform:rotate(-30deg)skew(-0deg,30deg); opacity: 0.5;transform-origin:0% 0%;}
+.trans7_4{position: absolute;width: 470px;height: 315px;top: 165px;left:-178px;transform:rotate(-20deg)skew(53deg,-17deg); opacity: 0.5;transform-origin:100% 0%;z-index: 1}
+.slo{opacity:0; }
+.trans0:hover ~ .over0{display: block;}
+.trans0:hover ~ .slo{color:#000;}
+.trans0_2:hover ~ .over0{display: block;}
+.trans0_2:hover ~ .slo{color:#000;}
+.trans0_3:hover ~ .over0{display: block;}
+.trans0_3:hover ~ .slo{color:#000;}
+/*.trans0:hover ~ .slogan{color:#1a1d22;}
+.trans0_2:hover ~ .slogan_u{color:#1a1d22;}
+.trans0_3:hover ~ .slogan_d{color:#1a1d22;}*/
+
+.trans1:hover ~ .over1{display: block;}
+
+.trans2:hover ~ .over2{display: block;}
+.trans2_2:hover ~ .over2{display: block;}
+
+.trans3:hover ~ .over3{display:block;}
+
+.trans4:hover ~ .over4{display: block;}
+
+.trans5:hover ~ .over5{display: block;}
+.trans5_2:hover ~ .over5{display: block;}
+
+.trans6:hover ~ .over6{display: block;}
+
+.trans7:hover ~ .over7{display: block;}
+.trans7_2:hover ~ .over7{display: block;}
+.trans7_3:hover ~ .over7{display: block;}
+.trans7_4:hover ~ .over7{display: block;}
+.main_logos{z-index:1;}
+.on{color:#1a1d22;}
