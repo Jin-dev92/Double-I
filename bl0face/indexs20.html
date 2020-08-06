@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js" type="text/JavaScript"></script>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+<style media="screen">
+  * {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .main_left {
+    width: 50%;
+    height: 100%;
+  }
+
+  .main_wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+  }
+
+  .con_wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+  }
+
+  .con_wrap > div {
+    position: absolute;
+    perspective: 100px;
+  }
+
+  .con_wrap{z-index: 99;}
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .con_bx{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #eee 0%, #838383 63%, #383838 97%);
+    opacity: 0.5;
+    z-index: 1;
+    transform: translateZ(750px);
+}
+  .con_bx:nth-child(4){
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 700px;;
+    transform: translateZ(50px);
+  }
+  .con_bx:nth-child(5){
+    width: 100px;
+    height: 100px;
+    top:10px;
+    left: 60%;
+    transform: translateZ(-50px);
+  }
+  .con_bx:nth-child(6){
+    width: 50px;
+    height: 50px;
+    top:800px;
+    left: 25px;
+    transform: translateZ(-100px);
+  }
+  .con_bx:nth-child(7){
+    width: 100px;
+    height: 100px;
+    top:200px;
+    left: 80%;
+    transform: translateZ(600px);
+  }
+  .con_bx:nth-child(8){
+    width: 100px;
+    height: 100px;
+    top:700px;
+    left: 80%;
+    transform: translateZ(-600px);
+  }
+  .con_bx:nth-child(9){
+    width: 130px;
+    height: 130px;
+    top:500px;
+    left: 90%;
+    transform: translateZ(200px);
+  }
+
+  .con_img{
+    width: 400px;
+    top:30%;
+    left:20%;
+    transform: translateZ(200px);
+    z-index: 99;
+  }
+  .con_txt {
+    transform: translateZ(200px);
+    font-size: 40px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 99;
+    text-align: left;
+    color: #333;
+  }
+  .con_txt p{
+    font-size: 18px;
+  }
+  .con_img_bx{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top:26%;
+    left:22%;
+    perspective: 300px;
+    transform: translateZ(100px);
+  }
+  .con_img img{width: 100%}
+  .swiper-container {
+       width: 100%;
+       height: 100%;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   .swiper-slide {
+       text-align: center;
+       font-size: 18px;
+       background: #f7f3ea;
+       /* Center slide text vertically */
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: -webkit-flex;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       -webkit-justify-content: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       -webkit-align-items: center;
+       align-items: center;
+   }
+   .aaa{z-index: 999999;width: 100%;height: 100%;position: absolute;}
+</style>
+
+<body>
+  <div class="wrap">
+    <div class="aaa">
+
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="con_wrap">
+            <div class="con_img">
+              <img src="img/slide3.png" alt="">
+            </div>
+            <div class="con_txt">
+                T.O.F
+                <p>ㅁㄴㅇㄹ마ㅓㄴㅇ루ㅏㅣㅁㄴ우라ㅣㅁ눙라ㅣㅁㄴㅇㄹ<br>ㅁ눙라ㅣㅁ눙리ㅏㅁㄴ울마ㅣㄴㅇ루ㅏ민ㅇㄹ<br>ㅁ눙라ㅣㅁ눙리ㅏㅁㄴ울마ㅣㄴㅇ루ㅏ민ㅇㄹ<br>ㅁ눙라ㅣㅁ눙리ㅏㅁㄴ울마ㅣㄴㅇ루ㅏ민ㅇㄹ</p>
+            </div>
+              <div class="con_bx con_img_bx"></div>
+              <div class="con_bx"></div>
+              <div class="con_bx"></div>
+              <div class="con_bx"></div>
+              <div class="con_bx"></div>
+              <div class="con_bx"></div>
+              <div class="con_bx"></div>
+              <div class="con_bx"></div>
+          </div>
+
+        </div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"><img src="img/slide3.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/slide1.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/slide2.png" alt=""></div>
+        <div class="swiper-slide"><img src="img/slide3.png" alt=""></div>
+    </div>
+    <!-- Add Scrollbar -->
+      <div class="swiper-pagination"></div>
+  </div>
+    </div>
+  </div>
+
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/js/swiper.min.js"></script>
+  <script type="text/javascript">
+
+  var width = $(document).width(),
+      height = $(document).height();
+  // 원 개수
+  var nodes = d3.range(200).map(function() { return {radius: Math.random() * 82 + 4}; }),
+      root = nodes[0],
+      color = d3.scale.category10();
+
+  root.radius = 0;
+  //이거 해야 마우스 반응
+  root.fixed = true;
+
+  //중력, 번위, 노드?,사이즈
+  var force = d3.layout.force()
+      .gravity(0.01)
+      .charge(function(d, i) { return i ? 0 : -1000; })
+      .nodes(nodes)
+      .size([width, height]);
+
+  force.start();
+  //svg 추가
+  var svg = d3.select(".aaa").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+  svg.selectAll("circle")
+      .data(nodes.slice(1))
+    .enter().append("circle")
+      .attr("r", function(d) { return d.radius; })
+      .style("fill", function(d, i) { return color(i % 3); });
+
+  force.on("tick", function(e) {
+    var q = d3.geom.quadtree(nodes),
+        i = 0,
+        n = nodes.length;
+
+    while (++i < n) q.visit(collide(nodes[i]));
+
+    svg.selectAll("circle")
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+  });
+
+  svg.on("mousemove", function() {
+    var p1 = d3.mouse(this);
+    root.px = p1[0];
+    root.py = p1[1];
+    force.resume();
+  });
+
+  function collide(node) {
+    var r = node.radius + 16,
+        nx1 = node.x - r,
+        nx2 = node.x + r,
+        ny1 = node.y - r,
+        ny2 = node.y + r;
+    return function(quad, x1, y1, x2, y2) {
+      if (quad.point && (quad.point !== node)) {
+        var x = node.x - quad.point.x,
+            y = node.y - quad.point.y,
+            l = Math.sqrt(x * x + y * y),
+            r = node.radius + quad.point.radius;
+        if (l < r) {
+          l = (l - r) / l * .5;
+          node.x -= x *= l;
+          node.y -= y *= l;
+          quad.point.x += x;
+          quad.point.y += y;
+        }
+      }
+      return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+    };
+  }
+  </script>
+  <script type="text/javascript">
+
+  var swiper = new Swiper('.swiper-container', {
+       pagination: '.swiper-pagination',
+       direction: 'vertical',
+       slidesPerView: 1,
+       paginationClickable: true,
+       mousewheelControl: true
+   });
+    var x = 0;
+    var y = 0;
+    var xx = 0
+    var yy = 0;
+    $("html").on("mousemove", function(e) {
+      tempX = e.pageX;
+      tempY = e.pageY;
+      if (tempX < 0) {
+        tempX = 0;
+      } //초기값보다 적을때 0
+      if (tempY < 0) {
+        tempY = 0;
+      } //초기값보다 적을때 0
+      // var winW = ($(document).width()/2);
+      // var winH = ($(document).height()/2);
+      if (y < tempY) {
+        yy += tempY / 10000;
+      } else if (y > tempY) {
+        yy -= tempY / 9500;
+      }
+      if (x < tempX) {
+        xx += tempX / 30000;
+      } else if (x > tempX) {
+        xx -= tempX / 25000;
+      }
+
+      var minxy = 10;
+      if (yy > minxy) {
+        yy = minxy;
+      }
+      if (xx > minxy) {
+        xx = minxy;
+      }
+      if (yy < -minxy) {
+        yy = -minxy;
+      }
+
+      if (xx < -minxy) {
+        xx = -minxy;
+      }
+      x = tempX;
+      y = tempY;
+
+      $(".con_wrap").css({
+        "transform": "rotateX(" + yy + "deg)rotateY(" + xx + "deg)"
+      });
+      return true;
+    })
+  </script>
+</body>
+
+</html>

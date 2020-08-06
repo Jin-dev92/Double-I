@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+<style media="screen">
+  * {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("/img/bgslide-1.svg");
+  }
+
+  .main_left {
+    width: 50%;
+    height: 100%;
+  }
+
+  .main_wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+  }
+
+  .build_wrap {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    transform-style: preserve-3d;
+  }
+
+  .build_wrap>div {
+    position: absolute;
+    opacity: 0.5;
+    perspective: 100px;
+  }
+
+  .build_front {
+    width: 300px;
+    height: 500px;
+    background: #eee;
+    left: 0;
+    transform: translateZ(50px);
+  }
+
+  .build_left {
+    width: 100px;
+    height: 500px;
+    background: #000;
+    transform: rotateY(90deg)translateZ(50px);
+    left: -100px;
+  }
+
+  .build_right {
+    width: 100px;
+    height: 500px;
+    background: #000;
+    transform: rotateY(90deg)translateZ(50px);
+    right: 0px;
+  }
+
+  .build_back {
+    width: 300px;
+    height: 500px;
+    background: #aaa;
+    transform: translateZ(-50px);
+  }
+
+  .build_top {
+    width: 300px;
+    height: 100px;
+    background: #ddd;
+    transform: rotateX(90deg)translateZ(-50px);
+    top: -100px;
+  }
+
+  .build_bottom {
+    width: 300px;
+    height: 100px;
+    background: #aaa;
+    transform: rotateX(90deg)translateZ(-50px);
+    bottom: 0;
+  }
+
+  .build_txt {
+    transform: translateZ(500px);
+    font-size: 40px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col-lg-1,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-md-1,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-xs-1,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main_right img {
+    width: 500px;
+    -webkit-filter: wave(add:0, freq:3, lightistrength:50, phase:30, strength:10);
+    -ms-filter: wave(add:0, freq:3, lightistrength:50, phase:30, strength:10);
+    -o-filter: wave(add:0, freq:3, lightistrength:50, phase:30, strength:10);
+    filter: wave(add:0, freq:3, lightistrength:50, phase:30, strength:10);
+  }
+
+  .can {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0);
+  }
+</style>
+
+<body>
+  <div class="wrap">
+    <canvas class="can" id="can" width="" height=""></canvas>
+
+    <div class="row main_wrap">
+      <div class="col-lg-6 main_left">
+        <div class="build_wrap">
+          <div class="build_txt">
+            타이틀이요!!!
+          </div>
+          <div class="build_front"></div>
+          <div class="build_back"></div>
+          <div class="build_left"></div>
+          <div class="build_right"></div>
+          <div class="build_top"></div>
+          <div class="build_bottom"></div>
+        </div>
+
+      </div>
+      <div class="col-lg-6 main_right">
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    // var c=document.getElementById("canvas");
+    // var ctx=c.getContext("2d");
+
+    var _canvas = document.querySelector("#can");
+
+    _canvas.width = $(".wrap").width();
+    _canvas.height = $(".wrap").height();
+    var container = {
+      x: 0,
+      y: 0,
+      width: $(".wrap").width(),
+      height: $(".wrap").height()
+    };
+
+
+
+$(function(){
+      function init() {
+        var canvas = document.getElementsByTagName('canvas')[0];
+        var c = canvas.getContext('2d');
+
+        var circles = [{
+            x: 400,
+            y: 400,
+            r: 250,
+            color: 25,
+            vx: 0.1,
+            vy: 0.8
+          },
+          {
+            x: 500,
+            y: 300,
+            r: 200,
+            color: 125,
+            vx: -0.5,
+            vy: -1.2
+          },
+          {
+            x: 300,
+            y: 500,
+            r: 180,
+            color: 125,
+            vx: -0.5,
+            vy: -1.2
+          }
+        ];
+
+
+        function draw() {
+          c.fillStyle = '#000';
+
+          c.fillRect(container.x, container.y, container.width, container.height);
+          c.clearRect(container.x,container.y,container.width,container.height);
+
+          for (var i = 0; i < circles.length; i++) {
+            var grd = c.createLinearGradient(0,0,circles[i].x/2,circles[i].y);
+            grd.addColorStop(0,'#835eff');
+            grd.addColorStop(1, '#e911a2');
+            c.fillStyle = grd;
+            c.beginPath();
+            c.arc(circles[i].x, circles[i].y, circles[i].r, 0, 2 * Math.PI, false);
+            c.fill();
+
+            if ((circles[i].x + circles[i].vx + circles[i].r > container.x + container.width) || (circles[i].x - circles[i].r + circles[i].vx < container.x)) {
+              circles[i].vx = -circles[i].vx;
+            }
+            if ((circles[i].y + circles[i].vy + circles[i].r > container.y + container.height) || (circles[i].y - circles[i].r + circles[i].vy < container.y)) {
+              circles[i].vy = -circles[i].vy;
+            }
+
+            circles[i].x += circles[i].vx;
+            circles[i].y += circles[i].vy;
+            // for (var j = 0; j < circles.length; j++) {
+            //   if((circles[i].x+circles[i].r > circles[j].x+circles[j].r))
+            // }
+
+          }
+          console.log("주황 = " + circles[0].x + circles[0].r );
+          console.log("녹색 = " + circles[1].x );
+          requestAnimationFrame(draw);
+
+        }
+        requestAnimationFrame(draw);
+
+
+      }
+
+      //invoke function init once document is fully loaded
+      // window.addEventListener('load', init, false);
+      init();
+
+
+})
+
+  </script>
+
+  <script type="text/javascript">
+    var x = 0;
+    var y = 0;
+    var xx = 0
+    var yy = 0;
+    $("html").on("mousemove", function(e) {
+      tempX = e.pageX;
+      tempY = e.pageY;
+      if (tempX < 0) {
+        tempX = 0;
+      } //초기값보다 적을때 0
+      if (tempY < 0) {
+        tempY = 0;
+      } //초기값보다 적을때 0
+      // var winW = ($(document).width()/2);
+      // var winH = ($(document).height()/2);
+      if (y < tempY) {
+        yy += tempY / 3000;
+      } else if (y > tempY) {
+        yy -= tempY / 2500;
+      }
+      if (x < tempX) {
+        xx += tempX / 4000;
+      } else if (x > tempX) {
+        xx -= tempX / 3500;
+      }
+
+      var minxy = 15;
+      if (yy > minxy) {
+        yy = minxy;
+      }
+      if (xx > minxy) {
+        xx = minxy;
+      }
+      if (yy < -minxy) {
+        yy = -minxy;
+      }
+
+      if (xx < -minxy) {
+        xx = -minxy;
+      }
+      x = tempX;
+      y = tempY;
+
+      $(".build_wrap").css({
+        "transform": "rotateX(" + yy + "deg)rotateY(" + xx + "deg)"
+      });
+      return true;
+    })
+  </script>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/js/swiper.min.js"></script>
+</body>
+
+</html>

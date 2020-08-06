@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>비오페이스</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/js/swiper.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+    *{margin: 0; padding: 0; border: 0;}
+    a,a:hover,a:link,a:visited{color: #333; text-decoration: none; font-weight: bold;}
+   html, body {
+     position: relative;
+     height: 100%;
+     background: url("img/bg.jpg");
+     font-family: "NanumSquareR",sans-serif;
+     min-width: 1200px;
+   }
+   p{font-weight: bold;}
+   li{list-style: none;}
+   .section{position: relative; width: 100%; clear: both;min-width: 1200px;}
+   .head{height: 125px;width: 100%;min-width: 1200px;}
+   .inner{width: 1200px; margin: 0 auto; min-width: 1200px;}
+   .head .inner{padding: 20px;}
+   .swiper-container {
+     width: 100%;
+     height: 600px;
+   }
+   .swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     /* Center slide text vertically */
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     -webkit-justify-content: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     -webkit-align-items: center;
+     align-items: center;
+   }
+   .swiper-container2 {
+     width: 100%;
+     padding-bottom: 60px;
+   }
+   .swiper-container2  .swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     /* Center slide text vertically */
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     -webkit-justify-content: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     -webkit-align-items: center;
+     align-items: center;
+   }
+   .swiper-pagination-bullet-active{background: #333;}
+     .swiper-pagination-bullet{width: 20px;height: 20px;}
+   .swiper-slide img{width: 100%;}
+   .main_event{padding-top:60px;}
+   .icon_box{width: 100%;}
+   .icon_box ul{width: 100%; display: flex; flex-wrap: wrap; align-items: center;justify-content: space-between; padding: 30px 0;}
+   .icon_box ul li img{display: block; margin: 0 auto;}
+   .icon_box ul li p{text-align: center;color: #646567;font-weight: bold;padding-top: 5px;}
+   .icon_box ul li a{display:block; margin: 0 auto;text-align: center; }
+   .section2{min-height: 65px;}
+   .section3{padding: 40px 0;}
+   .section4{height: 590px;overflow: hidden; min-width: 1200px; width: 100%;}
+
+   .fav{width: 100%;height: 600px;}
+   .favs img{width: 55%;}
+   .fav1{position: absolute;left: -100%;}
+   .fav2{position: absolute;right: -100%;}
+
+   .menu_section{height: 0;overflow: hidden;}
+   .main_event .inner{overflow: hidden;}
+
+   .herf_left{width: 50%;height: 65px;float: left; position: absolute;;top: 0; left: 0; background: #000; color: #fff;font-size: 18px; font-weight: bold;line-height: 65px;}
+   .herf_right{width: 50%;height: 65px; float: right; background: #fff;position: absolute;;right: 0;top: 0;color: #333;font-size: 18px; font-weight: bold;line-height: 65px;}
+   .herf_left .herf_view{width: 600px;height: 100%;float: right; text-align: center;}
+   .herf_right .herf_view{width: 600px;height: 100%; float: left;text-align: center;}
+   .herf_view{position: relative;}
+   .herf_view img{position: absolute;right: 10px; top: 15px;}
+
+   .logo{float: left;}
+   .inner_left{width: 600px; float: left}
+   .inner_right{width: 600px; float: right;}
+   .inner_right img{padding-left: 10px; padding-bottom: 40px;}
+   .icon_in_box{position: relative;}
+   .vertical_line{width: 1px; background: #646567; height: 100%;float: right; height: 60px;top: 2px; right: 0; position: absolute;}
+   .up_icon li{width: 25%;}
+   .down_icon li{width: 33.33%;}
+
+   .fav_left{position: absolute;;width: 1049px; height: 800px;left: 0;background: url("img/main_action1.png")fixed no-repeat right; background-size: auto 100%; background-position: 0%;float: left;z-index: 9; background-origin:content-box; }
+   .fav_right{position: absolute;width: 1049px; height: 800px;right: 0;background: url("img/main_action2.png")fixed no-repeat left; background-size: auto 100%; background-position: 100%;float: right;z-index: 8;background-origin:content-box;}
+   .oneida{width: 280px; position: absolute;left: 50%; margin-left: -140px; top:50%; margin-top: -140px; z-index: 999}
+   .mid_one{width: 280px; height: 280px; border-radius: 50%; background: #fff;position: absolute;left: 0; top:0; transition-duration: 1s;}
+   .mid_one img{display:block;margin: 0 auto; margin-top: 115px;}
+   .mid_two{width: 280px; height: 280px; border-radius: 50%; background: #fff;position: absolute;left: 0; top:0; transition-duration: 1s; transform: rotateY(-90deg);}
+   .mid_two p{margin: 20px 0;line-height: 32px;font-weight: bold;color: #333;font-size: 20px;text-align: center;width: 100%;padding-top: 70px;}
+   .mid_two p span{color: #9f7255;font-size: 28px}
+   .mid_two p a{padding: 6px 12px; border: 1px solid #000;margin-top: 20px;color: #000;text-align: center;}
+   .section5{height:380px; background: #fff;}
+   .sec5_1{width: 300px;z-index: 5;}
+   .sec5_2{width: 200px;z-index: 4;margin-left: -70px; margin-bottom: -55px}
+   .sec5_left{width: 600px; float: left;}
+   .sec5_right{width: 600px; float: right;}
+   .sec5_txt{padding-top: 130px; color:#646567 }
+   .sec5_txt h3{font-size: 32px;padding-bottom: 10px;}
+   .sec5_txt p{font-size: 18px; line-height: 28px;}
+   .more_btn{padding: 6px 12px; border: 1px solid #646567; color: #646567;display: inline-block; margin-top: 40px;font-weight: bold; cursor: pointer;}
+
+   .mid{padding-top: 100px;}
+   .section6{background: url("img/section5_bg.jpg") no-repeat center center; background-size:100% 100%;height: 900px;}
+   .movie{margin: 0 auto; display: block;}
+   .sec6_txt{text-align: center; color: #fff; padding-top: 40px; line-height: 34px;}
+   .sec6_txt p{font-size: 20px}
+   .sec6_txt span{font-size: 30px;line-height: 35px;}
+   .center{margin: 0 auto;}
+   .section6 .more_btn{border: 1px solid #fff; color: #fff; margin-top: 20px;}
+
+   #map{height: 440px;}
+
+   .footer{padding-bottom: 20px;}
+   .foot_logo{padding-top: 50px; width: 100%;padding-bottom: 30px;border-bottom: 1px solid #333;}
+   .foot_box{width: 25%;float: left;padding-bottom: 20px;}
+   .foot_box p,.foot_box h2,.foot_box h5,.foot_box h3 {padding: 0 10px;}
+   .foot_box h5{padding:10px 10px; font-size: 18px;}
+   .foot_box h2{font-size: 40px;}
+   .foot_box h3{font-size: 22px; padding-bottom: 3px;}
+   .foot_box p{font-size: 16px;}
+   .menus{float: right;width: 50%;padding-top: 25px;padding-bottom: 3px;}
+   .menus ul li{float: left;list-style: none; position: relative;}
+   .menus ul li a{font-size: 16px;}
+   .menus ul{width: 100%; display: flex;flex-wrap: wrap;justify-content: space-around;}
+   .all_bg{position: fixed;height: 100%;left: -100%;z-index: -99;}
+ </style>
+ <link rel="stylesheet" href="fonts/font.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+        <div class="inner">
+          <div class="logo">
+            <img src="img/header_logo.png" alt="">
+          </div>
+          <div class="menus">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Filler</a></li>
+              <li><a href="#">Lifting</a></li>
+              <li><a href="#">Obesity</a></li>
+              <li><a href="#">Skin</a></li>
+              <li><a href="#">ETC</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="inner menu_inner">
+          <ul>
+            <li>About Us </li>
+            <li>Filler</li>
+            <li>Lifting</li>
+            <li>Obesity</li>
+            <li>Skin</li>
+            <li>ETC</li>
+          </ul>
+        </div> -->
+      </div>
+      <div class="section section1">
+
+          <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/main_slide1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/main_slide1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/main_slide1.jpg" alt=""></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+      </div>
+      <div class="section section2">
+        <div class="herf_left">
+          <div class="herf_view">
+            공지사항
+            <a href="#"><img src="img/main_left_icon.png" alt=""></a>
+          </div>
+        </div>
+        <div class="herf_right">
+          <div class="herf_view">
+            이벤트
+            <a href="javascript:event_open();"><img src="img/main_right_icon.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="section menu_section">
+        <div class="inner">
+          <div class="main_event">
+            <div class="inner">
+
+
+            <div class="swiper-container2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/event_slide1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/event_slide2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/event_slide3.jpg" alt=""></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next2"></div>
+      <div class="swiper-button-prev2"></div>
+    </div>
+    </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section3">
+        <div class="inner">
+          <div class="inner_left">
+            <div class="icon_box">
+              <ul class="up_icon">
+                <li><a href="#"><div class="icon_in_box"><img src="img/icon1_off.png" alt=""></a><p>골반필러</p><div class="vertical_line"></div></div></li>
+                <li><a href="#"><div class="icon_in_box"><img src="img/icon2_off.png" alt=""></a><p>휜다리교정</p><div class="vertical_line"></div></div></li>
+                <li><a href="#"><div class="icon_in_box"><img src="img/icon3_off.png" alt=""></a><p>힙업필러</p><div class="vertical_line"></div></div></li>
+                <li><a href="#"><div class="icon_in_box"><img src="img/icon4_off.png" alt=""></a><p>가슴필러</p></div></li>
+              </ul>
+              <ul class="down_icon">
+                <li><a href="#"><div class="icon_in_box"><img src="img/icon5_off.png" alt=""></a><p>SKIN</p><div class="vertical_line"></div></div></li>
+                <li><a href="#"><div class="icon_in_box"><img src="img/icon6_off.png" alt=""></a><p>티오필</p><div class="vertical_line"></div></div></li>
+                <li><a href="#"><div class="icon_in_box"><img src="img/icon7_off.png" alt=""></a><p>포니테일리프팅</p></div></li>
+              </ul>
+            </div>
+          </div>
+          <div class="inner_right">
+            <img src="img/bio_big_txt.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="section section4">
+        <div class="oneida">
+          <div class="mid_one">
+            <img src="img/mid_logo.png" alt="">
+          </div>
+          <div class="mid_two">
+            <p>연구를 통한 차별화된<br> <span>3Step</span>  필러 시술 시스템<br><br>
+            <a >자세히보기</a></p>
+
+          </div>
+        </div>
+        <div class="favs">
+          <img src="img/main_action1.png" class="fav1" alt="">
+          <img src="img/main_action2.png" class="fav2" alt="">
+        </div>
+        <!-- <div class="fav_left">
+
+        </div>
+        <div class="fav_right">
+
+        </div> -->
+      </div>
+      <div class="section section5">
+        <div class="inner">
+          <div class="sec5_left">
+            <img src="img/sec5_1.png" class="sec5_1" alt="">
+            <img src="img/sec5_2.png" class="sec5_2" alt="">
+          </div>
+          <div class="sec5_right">
+            <div class="sec5_txt">
+            <h3>당신에게 딱 맞는 시술 선사 프로젝트.</h3>
+            <p>그 첫번째, 「Project : <span class="ch"> 少女 </span>(소녀) 」<br>
+            당신 안의 소녀를 ‘찾아＇드립니다.</p>
+            <div class="more_btn">
+              자세히 보기
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section6">
+        <div class="inner">
+          <div class="mid">
+            <iframe width="1000" height="480" style="border:2px solid #999" class="movie" src="https://www.youtube-nocookie.com/embed/c88yQyqdfZY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            <div class="sec6_txt">
+              <p><span>Brand Video</span><br>    당신에게 선사하고 싶었던<br>
+그 시술, 그 마음을 담아..</p>
+<div class="more_btn center">
+  자세히 보기
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section7" id="map">
+      </div>
+      <div class="footer">
+        <div class="inner">
+        <div class="foot_logo">
+          <img src="img/footer_logo.png" alt="">
+        </div>
+        <div class="addr">
+          <div class="foot_box">
+            <h5>CUSTOMER</h5>
+            <h2>1833-8838</h2>
+            <h3>FAX : 02-6004-5998</h3>
+            <p>월 수 목 : AM 11 : 00 ~ PM 07 : 00</p>
+            <p>화 금 : AM 11 : 00 ~ PM 09 : 00</p>
+            <p>토 요 일 : AM 11 : 00 ~ PM 05 : 00</p>
+          </div>
+          <div class="foot_box">
+            <h5>ADRESS</h5>
+            <p>서울특별시 강남구 강남대로 152길 22(신사동)<br>신사역 8번출구</p>
+          </div>
+          <div class="foot_box">
+            <h5>LICENCE</h5>
+            <p>사업자 등록번호 : 605-25-72864</p>
+          </div>
+          <div class="foot_box">
+            <h5>SOCIAL</h5>
+            <p><img src="img/foot_sns.png" alt=""></p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="all_bg">
+
+    </div>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=h3pQJQhw4SaCCkta6Lt8&submodules=geocoder"></script>
+    <!-- 지도 -->
+    <script>
+    var HOME_PATH = window.HOME_PATH || '.';
+    var position = new naver.maps.LatLng(37.517408, 127.021272);
+
+    var map = new naver.maps.Map('map', {
+        center: position,
+        zoom: 18
+    });
+
+    var markerOptions = {
+        position: position.destinationPoint(90, 15),
+        map: map,
+        icon: {
+            url: HOME_PATH +'img/bf_map_icon.png',
+            size: new naver.maps.Size(121, 176),
+            origin: new naver.maps.Point(0, 0),
+            anchor: new naver.maps.Point(121, 176)
+        }
+    };
+
+    var marker = new naver.maps.Marker(markerOptions);
+    </script>
+    <!-- 슬라이드 -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      speed:1000,
+    });
+
+    var ev_idx =0;
+    function event_open(){
+      if (ev_idx==0) {
+        $(".swiper-pagination").hide()
+        $(".menu_section").animate({"height":"315px"},1000);
+        $(".swiper-pagination").fadeIn(1000);
+        ev_idx=1;
+      }else {
+        $(".menu_section").animate({"height":"0px"},1000);
+        $(".swiper-pagination").fadeOut()
+        ev_idx=0;
+      }
+      var myswiper = new Swiper('.swiper-container2', {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: '.swiper-container2 .swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-container2 .swiper-button-next',
+          prevEl: '.swiper-container2 .swiper-button-prev',
+        },
+        speed:1000,
+      });
+    }
+    $(function(){
+      $(".mid_one").on("mouseover",function(){
+        $(".mid_one").css("transform","rotateY(90deg)");
+        setTimeout(function(){
+          $(".mid_two").css("transform","rotateY(0deg)");
+        },1000)
+
+      })
+      $(".mid_two").on("mouseleave",function(){
+        $(".mid_two").css("transform","rotateY(-90deg)");
+        setTimeout(function(){
+        $(".mid_one").css("transform","rotateY(0deg)");
+      },1000)
+      })
+    })
+    //페이지 스크롤링 시 이미지 가운데로 애니메이트
+    $(window).scroll(function () {
+      var scrollValue = $(document).scrollTop();//스크롤 위치
+
+      var fav_top= $(".favs").offset(); //애니메이션 되어야 할 div 위치
+      fav_top =fav_top.top;
+      fav_top = fav_top-650;
+      if (scrollValue==fav_top ||scrollValue>fav_top) {
+        $(".fav1").animate({"left":0},2000);
+        $(".fav2").animate({"right":0},2000);
+      }
+    });
+
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비오페이스</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/font/style.css">
+    <!-- <link rel="stylesheet" href="/css/sanfrancisco-font.css?<?=rand()?>"> -->
+</head>
+
+
+<style media="screen">
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+*{margin: 0;padding: 0;border: 0; list-style: none;font-family:'San Francisco', 'Nanum Square';}
+
+/*파란*/
+  html,body{width:100%;height: 100%; overflow: hidden;}
+  a:hover{text-decoration: none;}
+  a{color: #333;}
+  a:focus{outline: 0;}
+  h1,h2,h3{margin-top: 0; margin-bottom: 0;}
+  /*핑크*/
+  .header{position: fixed; top: 0;height: 70px; width: 100%;left: 0;z-index: 99;}
+  .nav_wrap{padding: 25px 85px;clear: both;}
+  .logo{float: left; padding-left: 20px;}
+  .logo img{display: block;margin: 0 auto; }
+
+  /*서브헤드*/
+  .m_head{display: none;}
+  .wrap{width: 100%;min-height: 100%;height: 100%; position: relative; background: url("img/sub_bg.jpg")no-repeat center center fixed;  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+  .main_slide{width: 100%;height: 100%;overflow: hidden;}
+  .img_wrap{position: relative;}
+  .img_bx{width: 530px; height: 530px; margin: 0 auto;background: #f6f6f6; border-radius: 10px; border: 1px solid #fefefe; box-shadow:10px 10px 10px #eee;}
+  .img_bx img{padding:  30px;}
+
+  .side_menu{padding-top: 100px;}
+  .side_menu ul li{padding: 10px 0px; font-weight: bold; font-size: 18px;}
+  .side_txt{font-size: 14px;}
+  .menu_row{padding-top: 70px;}
+  .main_slide{width: 100%;}
+  .swiper-slide img{width: 100%}
+  .m_slid_img{display: none;}
+  /*푸터*/
+  .footer{width: 100%;position: absolute;bottom: 0;left: 0;}
+  .addr{padding: 85px 70px;}
+  /*메뉴*/
+  .meun_box{cursor: pointer;width: 26px;float: left;z-index: 999; position: relative;}
+  .main_meun{width: 100%;padding: 100px 85px; clear: both;}
+  .main_meun ul{width: 250px;}
+  .main_meun ul li{float: left;padding: 10px 15px;padding-top: 34px; padding-bottom: 0;display: flex;width: 100%;}
+  .menu_wrap .main_meun ul li{padding: 20px 15px;}
+  .main_meun ul li a{ color: #000; font-size: 20px; position: relative;letter-spacing: 2.3px;font-weight: bold;color: #333;}
+  .meun_line{width: 25px; height: 5px; background: #000; margin-bottom: 3px; border-radius: 10px;}
+  .main_meun ul li a span{position: absolute;width: 0%;height: 100%; background: #333333;left: 0;z-index: -1;transition-duration: 0.4s;transform-origin: left;transition-property: all;}
+  .menu_wrap{position: fixed;left: -100%;background: #fff;width: 100%;height: 100%; margin-left: 0!important;top:0; opacity: 0.4;transition-duration: 0.4s; z-index: 9999;}
+  .menu_wrap .main_meun ul{margin: 0 auto;}
+  .menu_wrap .main_meun ul li a{text-align: center; display: block; margin: 0 auto;}
+  .menu_wrap .menu_logo{padding: 10px 20px; padding-bottom: 100px;}
+  .active_menu{left: 0!important;z-index: 9999;opacity: 1;}
+  .menu_close{position: absolute; right:30px; top:30px; z-index: 999; cursor: pointer;;width: 50px; height: 50px;}
+  .x1{width: 30px; height: 2px; background: #ccc;transform-origin: 50%; transform: rotate(45deg); position: absolute; left: 0;top:10px;transition-duration: 0.4s}
+  .x2{width: 30px; height: 2px; background: #ccc;transform-origin: 50%; transform: rotate(-45deg);position: absolute; left: 0;top:10px;transition-duration: 0.4s}
+  .remove_x{transform: rotate(0deg)}
+  .icons{position: absolute;right: 30px;bottom: 20px;}
+  .icons .md_line{padding: 10px;}
+  .md_line .line{ border-bottom: 1px solid #aaa;margin: 10px 0;}
+  .md_line img{width: 50px;}
+  .cate{letter-spacing: 4px; font-family:'SF UI Display Medium';font-size: 44px;}
+  /*서브 우측 컨텐츠*/
+  .menu_row{width: 50%; float: left;}
+  .side_content{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 480px;
+    height: 100%;
+    overflow: auto;
+    z-index: 3;
+    padding: 100px;
+    text-align: right;
+    line-height: 30px;
+    font-size: 18px;
+  }
+  .side_content p{
+    letter-spacing: 1.2px;
+
+  }
+  .side_bg{background: #fff;width: 100%;height: 100%; opacity: 0.9;position: absolute;left: 0; top:0;z-index: -1;}
+  .side_tit{padding-bottom: 50px; letter-spacing: 3px;}
+  .hash{color: #0379ec; font-weight: bold;}
+
+  /*가운데*/
+  .hash_con{position: absolute;width: 100%;height: 100%; z-index: 90; display: none;}
+  .hash_con .container{margin-top: 100px;}
+  .hash_head{width: 100%; position: relative; background: #fff;font-size: 24px;border-bottom: 1px solid #ccc; }
+  .hash_head h2{padding: 13px 40px;}
+  .hash_contant{width: 100%; background: #fff; padding: 20px;}
+  .hash_contant img{max-width: 100%; display: block;margin: 0 auto;}
+  .up{display: block;}
+  @media (max-width:640px) {
+    .hash_con{position: fixed;left: 0;width: 100%; height: 100%; overflow: auto; bottom: -100%;display: block; transition-duration: 0.6s;padding-top: 70px;}
+    .hash_con .container{padding: 0; height: 100%; background: #fff;margin-top: 0;}
+    .hash_head{border-top: 1px solid #ccc;}
+    .up{bottom: 0; }
+    .close_hash{    font-size: 40px;
+    text-align: center;
+    padding: 100px 0; background: #fff;
+}
+    .close_hash a{width: 100%;}
+    /*헤드*/
+    .wrap{overflow: auto;}
+    .header{background: #fff;}
+    .side_bg{opacity: 1;}
+    .m_head{width: 100%;padding-top: 70px;display: block;}
+    .m_head img{width: 100%;}
+    .side_content{float: left;padding: 30px 30px;width: 100%;position: relative;}
+    .nav_wrap{padding: 25px 10px;}
+    .menu_row{display: none;}
+    .menu_wrap .main_meun ul{margin:0;}
+    .menu_wrap .main_meun ul li a{margin: 0;}
+    .menu_wrap .main_meun{padding: 20px 10px;}
+    .menu_wrap .menu_logo img{width: 125px;}
+    /*푸터*/
+    .addr{padding: 0;}
+    .addr p{font-size: 6px; color: #666;}
+    .logo{width: 100%;position: absolute; padding: 0;left: 0;}
+    .logo img{display: block;margin: 0 auto;}
+      .logo a{width: 170px; margin: 0 auto;}
+  }
+  @media (min-width:640px) {
+    .menu_wrap .menu_logo img{display: block;margin: 0 auto;}
+
+  }
+</style>
+<body>
+  <div class="header">
+    <div class="nav_wrap">
+      <div class="meun_box">
+      <div class="meun_line"></div>
+      <div class="meun_line"></div>
+      <div class="meun_line"></div>
+    </div>
+      <div class="logo">
+      <a href="#"><img src="img/logo.png" alt=""></a>
+      </div>
+    </div>
+    <div class="row menu_wrap">
+      <div class="menu_close">
+        <div class="x1"></div>
+        <div class="x2"></div>
+      </div>
+      <div class="main_meun">
+        <div class="menu_logo">
+          <a href="#"><img src="img/logo.png" alt=""></a>
+        </div>
+      <ul>
+        <li><a href="#">T.O.F<span></span></a></li>
+        <li><a href="#">BODY FILLER<span></span></a></li>
+        <li><a href="#">LIFTING<span></span></a></li>
+        <li><a href="#">BIOFACE STORY<span></span></a></li>
+        <li><a href="#">ETC<span></span></a></li>
+        <li>
+          </li>
+      </ul>
+    </div>
+    <div class="icons">
+      <div class="md_line">
+        <img src="img/board.png" alt="">
+        <div class="line"></div>
+      </div>
+      <div class="md_line">
+        <img src="img/kakao.png" alt="">
+        <div class="line"></div>
+      </div>
+      <div class="md_line">
+        <img src="img/calling.png" alt="">
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="wrap">
+      <div class="m_head">
+        <img src="img/sub_bg_m.jpg" alt="">
+      </div>
+      <div class="row menu_row">
+        <div class="main_meun">
+        <ul>
+          <li><h1 class="cate">Filler</h1></li>
+          <li><a href="#">바디필러<span></span></a></li>
+          <li><a href="#">무슨필러<span></span></a></li>
+          <li><a href="#">LIFTING<span></span></a></li>
+          <li><a href="#">BIOFACE STORY<span></span></a></li>
+          <li><a href="#">ETC<span></span></a></li>
+          <li>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="side_content">
+
+      <h2 class="side_tit">티오필이란?</h2>
+      <p>진피와 가장 가까운 성분,<br>
+이에 필러를 더하고,<br>
+볼륨증가 효과를 주는<br>
+<a href="#"  class="hash">#시술입니다.</a><br><br>
+
+실제 피부와 거의 흡사하며,<br>
+자연스러운 감촉을<br>
+느낄 수 있습니다.<br>
+<br>
+진피와 가장 가까운 성분,<br>
+그로인해 염증반응, 부작용이<br>
+최소화된 필러입니다.<br>
+<br>
+실제 진피와 매우 흡사한<br>
+2~5년 정도의 긴 유지력을<br>
+지니고 있습니다.<br>
+<a href="#" class="hash">#Long Lasting</a><a href="#" class="hash">#Innovation</a></p>
+<div class="side_bg">
+
+</div>
+
+    </div>
+    <div class="hash_con">
+      <div class="container">
+        <div class="hash_head">
+          <h2>#시술</h2>
+        </div>
+        <div class="hash_contant">
+          <img src="img/tof1.JPG" alt="">
+        </div>
+        <div class="close_hash">
+          <a href="javascript:close_hash()">돌아가기</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="addr">
+        <p style="font-weight:bold; font-size:14px;">TEL : 1 8 3 3 - 8 8 3 8</p>
+        <p>서울특별시 강남구 강남대로 152길 22(신사동) 신사역 8번 출구</p>
+        <p style="font-size:10px;">대표자 : 박주영 , 상호명 : 비오페이스의원 .사업자 등록번호 : 605 - 25 - 72864</p>
+      </div>
+    </div>
+  </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+     pagination: '.swiper-pagination',
+     autoplay: 3000,
+     speed: 1000,
+     slidesPerView: 1,
+     paginationClickable: true,
+     loop: true
+ });
+ function close_hash(){
+   $(".hash_con").removeClass("up");
+ }
+ $(function(){
+   $(".meun_box").click(function(){
+      $(".menu_wrap").css("opacity","1");
+     $(".menu_wrap").addClass("active_menu");
+     $(".menu_close").find("div").removeClass("remove_x");
+
+   })
+   $(".menu_wrap .main_meun ul li a").hover(function(){
+     $(this).css("color","#fff");
+     $(this).find("span").css("width","100%");
+   },function(){
+     $(this).css("color","#333");
+     $(this).find("span").css("width","0%");
+   })
+   $(".menu_close").click(function(){
+     $(this).find("div").addClass("remove_x");
+     setTimeout(function(){
+       $(".menu_wrap").css("opacity","0");
+     },400);
+     setTimeout(function(){
+       $(".menu_wrap").removeClass("active_menu");
+     },1400);
+
+   })
+   $(".hash").click(function(){
+     $(".hash_con").addClass("up");
+   })
+
+ })
+    </script>
+</body>
+
+</html>

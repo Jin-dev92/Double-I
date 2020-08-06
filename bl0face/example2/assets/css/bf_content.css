@@ -1,0 +1,188 @@
+.content {
+	width: 1200px;
+	margin: auto;
+}
+/*스와이퍼*/
+.swiper-container {
+	width: 1200px;
+	height: 758px;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+/*페이지네이션*/
+.s_pn {
+	width: 1200px;
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #F5863F;
+}
+/*위치*/
+.con_con {
+	margin-bottom: 80px;
+	max-width: 100%;
+}
+.t_cap {
+	height: 120px;
+	text-align:center;
+	background-color: #F1F1F1;
+	outline: none;
+}
+.t_cap h3 {
+	color: #F87036;
+	font-weight: bold;
+}
+.second_con {
+	padding-top: 20px;
+	height: 350px;
+}
+
+.bf_bf {
+	padding-left: 50px;
+}
+.second_img .span4, .second_img .span3{
+	text-align: center;
+	width: 600px;
+	margin-top: 80px;
+}
+.second_img .span3 {
+	margin-top: 0;
+}
+.second_img img {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.second_img .span3 span, .second_img .span4 span {
+	display: inline-block;
+	width: 0;
+	height: 3.5em;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.span3 img, .span4 img {
+	cursor: pointer;
+}
+.fixed {
+	position: fixed;
+	right: 0;
+	width: 50%;
+	background-color: #E1E1E1;
+	height: 100%;
+	z-index: -10;
+}
+.bf_title {
+	text-align: center;
+}
+.bf_title h1 {
+	color: #F87036;
+	font-weight: bold;
+	margin-bottom: -10px;
+}
+.w_img {
+	position: relative;
+	top: -800px;
+	height: 100px;
+	z-index: 999;
+}
+.w_img h1 {
+	margin-bottom: 20px;
+}
+#w_bg_img {
+	margin-left: -300px;
+}
+.r1 {
+	position: relative;
+	top: -100px;
+	z-index: 999;
+	width: 644px;
+	height:394px;
+}
+.r2 {
+	position: relative;
+	top: -560px;
+	right: -550px;
+	background-color: white;
+	width: 650px;
+	height: 390px;
+}
+.three_step_info {
+	margin-left: 130px;
+	padding-top: 50px;
+}
+.three_step_info p {
+	font-stretch: extra-condensed;
+	letter-spacing: 0.3px;
+}
+.step h3 {
+	background-color: #F87036;
+	color: white;
+	text-align: center;
+	width: 150px;
+	height: 40px;
+	float: left;
+	padding-top: 8px;
+	margin-right: 20px;
+}
+.r3 {
+	position: relative;
+	top: -220px;
+	left: -280px;
+}
+.r4 {
+	position: relative;
+	top: -550px;
+	left: 280px;
+	z-index: 999;
+}
+.bf_mv {
+	border: 7px solid gray;
+	position: relative;
+	top: -600px;
+	left: 175px;
+}
+.imgs0 {
+	height: 900px;
+}
+.imgs {
+	height: 300px;
+}
+.imgs2 {
+	height: 600px;
+}
+.bf_map {
+	margin-top: -100px;
+	width: 1200px;
+	height: 400px;
+}
+/*섬네일*/
+.thumbnail {
+	padding: 0px;
+}
+.thumimg {
+	border: none;
+}
+

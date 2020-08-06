@@ -1,0 +1,43 @@
+ul {padding:0;margin:0;}
+ul li {list-style:none;}
+.list-title {}
+.list-title ul {color:#383838;font-size:0.95em;font-weight:bold;line-height:15px;padding:0;overflow:hidden}
+.list-title ul li {float:left;line-height:38px;}
+].list-title ul li.fd_chk {width:30px}
+.list-title:after {display:block;visibility:hidden;clear:both;content:""}
+
+.td_chk {display:inline-block}
+.fd_num {display:inline-block;width:30px;margin:0 20px;padding:0}
+.fd_title {width:60%;text-align:center}
+
+.tbl_head01 h3 {display:inline-block;
+	font-weight:normal;     
+	background: transparent;
+    margin: 1.5em 0;
+	padding: 0;
+    border: 0;
+    font-size: 100%;
+	vertical-align: baseline;
+}
+ 
+.tbl_head01 h3 a {text-decoration:none;    color: #000; font-size:15px; font-weight:900}
+.tbl_head01 ul li {    background-color: #fafafa;
+    padding: 8px 20px 8px 0;
+    margin: 3px 0 3px;
+    display: block;
+    box-shadow: 1px 1px 1px #f3f3f3;
+	-webkit-box-shadow:1px 1px 1px #f3f3f3;
+	-moz-box-shadow:1px 1px 1px #f3f3f3;
+	border-bottom:1px solid #f3f3f3;
+	cursor:pointer;
+	}
+.tbl_head01 ul li:hover { background:#f4f4f4; }
+
+.tbl_head01 .panel {padding: 13px 0 5px 0px;margin-left: 95px;width: 1000px; line-height: 20px; color: #8c8c8c;}
+
+#fd_accordion .active {}
+#fd_accordion .active h3 {font-weight:900}
+
+#sfl {width: 80px;height: 30px; padding: 5px;}
+.frm_input {width: 200px;height: 28px;    background: #fff !important;}
+.btn_submit {width: 60px;height: 30px !important; background: #151111; color: #ead6d6;}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+<style media="screen">
+*{margin: 0 0 0 0;padding: 0 0 0 0;border: 0; padding-left: 0;padding-right: 0;margin-left: 0;margin-right: 0;}
+html,body{width: 100%;height: 100%;}
+.wrap{width: 100%;height: 100%;position: relative;}
+.main_wrap{width: 100%;height: 100%;position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: 400px;
+  perspective-origin: 50% 50%; animation: prevv 10s linear infinite;}
+.main_right , .main_left{overflow: hidden; height: 100%;}
+.tt{position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-wrap: wrap;}
+h1{transform: rotateX(-10deg);position: absolute;top: 200px; left: 100px;}
+.main_right img{width: 100%;}
+.main_left img{width: 100%;}
+.row{margin-left: 0;margin-right: 0;}
+@-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16%      { -webkit-transform: rotateY(-90deg);                           }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+    50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+    66%      { -webkit-transform: rotateY(90deg) rotateX(90deg);             }
+    83%      { -webkit-transform: rotateX(90deg);                            }
+  }
+
+  @keyframes spincube {
+    from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16%      { -webkit-transform: rotateY(-90deg);                           }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+    50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+    66%      { -webkit-transform: rotateY(90deg) rotateX(90deg);             }
+    83%      { -webkit-transform: rotateX(90deg);                            }
+  }
+  .cube_wrap{position: absolute;height: 50%;transform: translate(-50%,-50%); left: 50%; top: 50%;}
+.cube_box{
+  -webkit-animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transform-style: preserve-3d;
+  transform-origin: 100px 100px 0;
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 100px 100px 0;
+  }
+.cube_div{width: 200px;height: 200px; border: 1px solid #444; position: absolute; background: #333; text-align: center; line-height: 200px; font-size: 100px; opacity: 0.5;}
+.cube_div:nth-child(1){ -webkit-transform: translateZ(100px); transform: translateZ(100px)}
+.cube_div:nth-child(2) { -webkit-transform: rotateY(90deg) translateZ(100px);transform: rotateY(90deg) translateZ(100px);                 }
+.cube_div:nth-child(3) { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(100px);  transform: rotateY(90deg) rotateX(90deg) translateZ(100px);}
+.cube_div:nth-child(4) { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);  transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);}
+.cube_div:nth-child(5) { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px); transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);}
+
+.cube_div:nth-child(6) { -webkit-transform: rotateX(-90deg) translateZ(100px);   transform: rotateX(-90deg) translateZ(100px);              }
+
+@keyframes prevv {
+  0%{perspective-origin: 50% 50%;}
+  25%{perspective-origin: 0% 50%;}
+  50%{perspective-origin: 0% 0%;}
+  75%{perspective-origin: 50% 0%;}
+  100%{perspective-origin: -50% -90%;}
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9,
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9,
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9,
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+  padding-left: 0;padding-right: 0;margin-left: 0;margin-right: 0;
+}
+.scene {
+  width: 300px;
+  height: 300px;
+  margin: 75px auto 0;
+  perspective: 1200px;
+}
+
+.cube {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: translateZ(-150px) rotateX(0deg);
+  animation: example 15s linear infinite;
+}
+
+.side {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  background-color: #999;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+  font: 50px/1 'Trebuchet MS', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.side::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+}
+.side span {
+  position: relative;
+  display: block;
+}
+
+.back span {
+  animation: back 15s linear infinite;
+}
+.top span {
+  animation: top 15s linear infinite;
+}
+.bottom span {
+  animation: bottom 15s linear infinite;
+}
+.front span {
+  animation: front 15s linear infinite;
+}
+
+.guides {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 200px;
+  height: 100%;
+  border-style: dotted;
+  border-width: 0 1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.guides::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  border-left: 1px dotted;
+}
+
+.back {
+  transform: translateZ(-150px) rotateX(180deg);
+}
+.top {
+  transform: translateY(-150px) rotateX(90deg);
+}
+.bottom {
+  transform: translateY(150px) rotateX(270deg);
+}
+.front {
+  transform: translateZ(150px);
+}
+
+.back {
+  background-image: url(https://askd.github.io/codepen/back.jpg);
+}
+.top {
+  background-image: url(https://askd.github.io/codepen/top.jpg);
+}
+.bottom {
+  background-image: url(https://askd.github.io/codepen/bottom.jpg);
+}
+.front {
+  background-image: url(https://askd.github.io/codepen/front.jpg);
+}
+
+@keyframes example {
+  0% { transform: translateZ(-150px) rotateX(0deg); }
+    15% { transform: translateZ(-150px) rotateX(-90deg); }
+    25% { transform: translateZ(-150px) rotateX(-90deg); }
+    40% { transform: translateZ(-150px) rotateX(-180deg); }
+    50% { transform: translateZ(-150px) rotateX(-180deg); }
+    65% { transform: translateZ(-150px) rotateX(-270deg); }
+    75% { transform: translateZ(-150px) rotateX(-270deg); }
+    90% { transform: translateZ(-150px) rotateX(-360deg); }
+    100% { transform: translateZ(-150px) rotateX(-360deg); }
+}
+
+@keyframes front {
+  0% { transform: translateY(0px) }
+    15% { transform: translateY(-100px); }
+    25% { transform: translateY(-100px); }
+    40% { transform: translateY(0px); }
+    50% { transform: translateY(0px); }
+    65% { transform: translateY(100px); }
+    75% { transform: translateY(100px); }
+    90% { transform: translateY(0px); }
+    100% { transform: translateY(0px); }
+}
+@keyframes bottom {
+  0% { transform: translateY(100px) }
+    15% { transform: translateY(0px); }
+    25% { transform: translateY(0px); }
+    40% { transform: translateY(-100px); }
+    50% { transform: translateY(-100px); }
+    65% { transform: translateY(0px); }
+    75% { transform: translateY(0px); }
+    90% { transform: translateY(100px); }
+    100% { transform: translateY(100px); }
+}
+@keyframes back {
+  0% { transform: translateY(0px) }
+    15% { transform: translateY(100px); }
+    25% { transform: translateY(100px); }
+    40% { transform: translateY(0px); }
+    50% { transform: translateY(0px); }
+    65% { transform: translateY(-100px); }
+    75% { transform: translateY(-100px); }
+    90% { transform: translateY(0px); }
+    100% { transform: translateY(0px); }
+}
+@keyframes top {
+  0% { transform: translateY(-100px) }
+    15% { transform: translateY(0px); }
+    25% { transform: translateY(0px); }
+    40% { transform: translateY(100px); }
+    50% { transform: translateY(100px); }
+    65% { transform: translateY(0px); }
+    75% { transform: translateY(0px); }
+    90% { transform: translateY(-100px); }
+    100% { transform: translateY(-100px); }
+}
+</style>
+<body>
+<div class="wrap">
+  <div class="row main_wrap">
+    <div class="col-lg-6 main_left">
+      <div class="scene">
+  <div class="cube">
+    <div class="side back">
+      <div class="guides"></div>
+      <span>BACK</span>
+    </div>
+    <div class="side top">
+      <div class="guides"></div>
+      <span>TOP</span>
+    </div>
+    <div class="side bottom">
+      <div class="guides"></div>
+      <span>BOTTOM</span>
+    </div>
+    <div class="side front">
+      <div class="guides"></div>
+      <span>FRONT</span>
+    </div>
+  </div>
+</div>
+      <div class="cube_wrap">
+        <div class="cube_box">
+      <div class="cube_div">1</div>
+      <div class="cube_div">2</div>
+      <div class="cube_div">3</div>
+      <div class="cube_div">4</div>
+      <div class="cube_div">5</div>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-6 main_right">
+      <div class="tt">
+      <h1>택스트</h1>
+      <img src="img/main_1.png" alt="">
+    </div>
+    </div>
+  </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+</body>
+
+</html>

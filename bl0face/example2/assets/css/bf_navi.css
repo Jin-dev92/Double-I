@@ -1,0 +1,74 @@
+.option {
+	width: 1200px;
+	top: -10px;
+	z-index: 9999;
+	margin-top: 100px;
+	margin-left: -1px;
+}
+.navbar {
+	border: none;
+	font-size: 12px;
+}
+.navbar .nav > li {
+	float: left;
+}
+.navbar .nav > li > a {
+	/*display: block;*/
+	color: #414141;
+	padding: 10px 20px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.op {
+	width: 1200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#a {
+	padding-top: 20px;
+}
+.logo {
+	position: absolute;
+	top: -60px;
+	left: 490px;
+}
+.dropdown a{
+	font-size: 30px;
+	font-weight: bold;
+	font-stretch: extra-condensed;
+}
+.glyphicon-triangle-bottom {
+	font-size: 10px;
+	margin-left: 5px;
+}
+.dropdown-menu {
+	width: 280px;
+	height: 500px;
+	border: none;
+	box-shadow: none;
+}
+.dropdown-menu li {
+	height: 40px;
+	padding-bottom: 50px;
+	font-size: 5em;
+}
+
+.dropdown-menu li a {
+	color: #CBCBCB;
+	font-weight: bold;
+}
+.dropdown > a:focus, .dropdown > a:hover,
+.dropdown-menu > li > a:hover {
+	background-color: white !important;
+	
+}
+
+.dropdown-menu > li > a:hover {
+	background-color: white !important;
+	color: black;
+}

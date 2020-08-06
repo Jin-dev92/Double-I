@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'NanumSquareR';
+  src: url('NanumSquareR.eot');
+  src: url('NanumSquareR.woff2') format('woff2'),
+       url('NanumSquareR.woff') format('woff'),
+       url('NanumSquareR.ttf') format('truetype'),
+       url('NanumSquareR.svg#NanumSquareR') format('svg'),
+       url('NanumSquareR.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumSquareB';
+  src: url('NanumSquareB.eot');
+  src: url('NanumSquareB.woff2') format('woff2'),
+       url('NanumSquareB.woff') format('woff'),
+       url('NanumSquareB.ttf') format('truetype'),
+       url('NanumSquareB.svg#NanumSquareB') format('svg'),
+       url('NanumSquareB.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumSquareEB';
+  src: url('NanumSquareEB.eot');
+  src: url('NanumSquareEB.woff2') format('woff2'),
+       url('NanumSquareEB.woff') format('woff'),
+       url('NanumSquareEB.ttf') format('truetype'),
+       url('NanumSquareEB.svg#NanumSquareEB') format('svg'),
+       url('NanumSquareEB.eot?#iefix') format('embedded-opentype');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumSquareL';
+  src: url('NanumSquareL.eot');
+  src: url('NanumSquareL.woff2') format('woff2'),
+       url('NanumSquareL.woff') format('woff'),
+       url('NanumSquareL.ttf') format('truetype'),
+       url('NanumSquareL.svg#NanumSquareL') format('svg'),
+       url('NanumSquareL.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK';
+    font-style: normal;
+    font-weight: 100;
+    src:url('NotoSansCJKkr-Thin.eot'),
+    url('NotoSansCJKkr-Thin.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansCJKkr-Thin.woff') format('woff'),
+    url('NotoSansCJKkr-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK';
+    font-style: normal;
+    font-weight: 300;
+    src:
+    url('NotoSansCJKkr-Light.eot'),
+    url('NotoSansCJKkr-Light.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansCJKkr-Light.woff') format('woff'),
+    url('NotoSansCJKkr-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK';
+    font-style: normal;
+    font-weight: 350;
+    src:
+    url('NotoSansCJKkr-DemiLight.eot'),
+    url('NotoSansCJKkr-DemiLight.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansCJKkr-DemiLight.woff') format('woff'),
+    url('NotoSansCJKkr-DemiLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK';
+    font-style: normal;
+    font-weight: 400;
+    src:
+    url('NotoSansCJKkr-Regular.eot'),
+    url('NotoSansCJKkr-Regular.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansCJKkr-Regular.woff') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK';
+    font-style: normal;
+    font-weight: 500;
+    src:
+    url('NotoSansCJKkr-Medium.eot'),
+    url('NotoSansCJKkr-Medium.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansCJKkr-Medium.woff') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK';
+    font-style: normal;
+    font-weight: 700;
+    src:
+    url('NotoSansCJKkr-Bold.eot'),
+    url('NotoSansCJKkr-Bold.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansCJKkr-Bold.woff') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK';
+    font-style: normal;
+    font-weight: 900;
+    src:
+    url('NotoSansCJKkr-Black.eot'),
+    url('NotoSansCJKkr-Black.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansCJKkr-Black.woff') format('woff'),
+    url('NotoSansCJKkr-Black.otf') format('opentype');
+}

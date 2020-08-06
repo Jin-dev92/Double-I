@@ -1,0 +1,140 @@
+/*스와이퍼*/
+.swiper-container {
+	width: 1198px;
+	height: 758px;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+/*페이지네이션*/
+.s_pn {
+	width: 1200px;
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #F5863F;
+}
+/*위치*/
+.con_con {
+	margin-bottom: 80px;
+	margin-left: -15px;
+}
+.t_cap {
+	height: 120px;
+	text-align:center;
+}
+.t_cap h3 {
+	color: #F87036;
+	font-weight: bold;
+}
+.second_con {
+	height: 200px;
+
+}
+.second_con p {
+	font-size: 5em;
+	color: #F87036;
+	font-weight: bold;
+	font-stretch: semi-condensed;
+	line-height: 110%;
+}
+.second_con span {
+	color: #767B81;
+	letter-spacing: -7px;
+	line-height: 150%;
+	font-size: 50px;
+}
+.bf_bf {
+	padding-left: 50px;
+}
+.second_img .span4, .second_img .span3{
+	text-align: center;
+	margin-top: 10px;
+}
+ .second_img .span3 {
+ 	margin-top: 0;
+ }
+.fixed {
+  position: fixed;
+  right: 0;
+  width: 50%;
+  background-color: #E1E1E1;
+  height: 100%;
+  z-index: -10;
+}
+.bf_title {
+	text-align: center;
+}
+.bf_title h1 {
+	color: #F87036;
+	font-weight: bold;
+	margin-bottom: -10px;
+}
+.w_img {
+	position: relative;
+	top: -600px;
+	height: 100px;
+	z-index: 999;
+}
+.r1 {
+	position: relative;
+	top: -100px;
+	z-index: 999;
+}
+.r2 {
+	position: relative;
+	top: -450px;
+	right: -550px;
+}
+.r3 {
+	position: relative;
+	top: 20px;
+	left: -265px;
+}
+.r4 {
+	position: relative;
+	top: -220px;
+	left: 290px;
+	z-index: 999;
+}
+.bf_mv {
+	position: relative;
+	top: -500px;
+	left: 250px;
+}
+.imgs0 {
+	height: 800px;
+}
+.imgs {
+	height: 200px;
+}
+.imgs2 {
+	height: 500px;
+}
+.bf_map {
+	margin-top: -100px;
+}
+

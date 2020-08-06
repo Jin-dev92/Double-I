@@ -1,0 +1,114 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700);
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+*{margin: 0;padding: 0;border: 0;list-style: none;font-family:'Nanum Barun Gothic','Nanum Square',"Helvetica Neue",Helvetica,Arial,sans-serif;}
+p,a,h4,h5,h6{font-weight: 300;}
+/*파란*/
+  html,body{width:100%;min-height: 100%;}
+  html{}
+  nav{background: rgba(255,255,255,1)!important}
+  a{color: #fff;}
+  nav ul a{color: #333;}
+
+  .null_btn{border: 1px solid #fff; padding: 10px 20px; background: #333; color: #fff;}
+  .sidenav-trigger i{color: #000;}
+  /*메인*/
+  .titles{letter-spacing: 10px;}
+  .main_slide{padding: 0!important;}
+  .main_section{width: 100%;height: 90vh;display: block;float: left; padding: 20px; background: #fff;}
+  .mid_section{width: 100%; height: 450px;display: block;float: left;padding: 20px; background: #fff;}
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    z-index: 10;
+    color: #fff;
+    overflow: hidden;
+  }
+  .mid_flex{
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    z-index: 10;
+  }
+  .bottom_flex{
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -ms-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    z-index: 10;
+  }
+  .bg_set{width: 100%;height: 100%; position: absolute;left: 0;top:0;}
+  .full_screen{width: 100%;height: 100%;}
+  .bg_img{position: absolute;width: 100%;left: 0;top:0;z-index: -1;}
+  .line-set{width: 100%; max-width: 150px; height: 4px; background: #c9261b; display: block;margin: 0 auto;}
+
+  .herfs{width: 50%; float: left;z-index: 10;position: relative; cursor: pointer;}
+  .herfs img{width: 100%;display: block;}
+  .herfs h4{color: #fff;margin-bottom: 0;padding-bottom: 2rem;}
+
+  /*푸터*/
+  .page-footer{background: #212121; clear: both;}
+  .page-footer h3{color: #fff;}
+  @media (max-width:768px) {
+    .herfs{height: auto;width: 100%;}
+    .main_section .bg_img{width: auto;height: 100%;left: -80%;}
+    .main_section iframe{width: 80%;height: 40%;}
+    .mid_section{height: auto;}
+    h1{font-size: 3.2rem}
+    h3{font-size: 1.92rem}
+    h4{font-size: 1.28rem}
+  }

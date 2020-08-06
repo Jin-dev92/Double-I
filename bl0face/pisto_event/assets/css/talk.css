@@ -1,0 +1,265 @@
+/* outline */
+.jtalk {
+	position: absolute;
+	top: 10%;
+	left: 30%;
+	outline: 1px solid black;
+	width: 400px;
+}
+.talk_content {
+	overflow-y:scroll;
+	height: 385px;
+}
+
+/*navi*/
+.option {
+	width: 100%;
+	min-width: 300px;
+	padding: 0;
+	margin: 0;
+	outline: 1px solid black;
+}
+.navbar {
+	background-color: #fff;
+	font-size: 12px;
+}
+.navbar .nav > li {
+	float: left;
+}
+.navbar .nav > li > a {
+	/*display: block;*/
+	color: #414141;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+	background-color: white !important;
+	color: red !important;
+}
+#AUTH_STATE {
+	font-size: 15px;
+	color: #414141;
+}
+
+/* 하단메뉴 */
+.menu_outline {
+	outline: 1px solid black;
+	height: 50px;
+	vertical-align: middle;
+}
+.menu li{
+	margin-top: 15px;
+	list-style: none;
+	text-align: center;
+}
+.menu li a:link , .menu li a:visited{
+	text-decoration: none;
+	color: #414141;
+}
+
+.menu li a:hover{
+	color: red;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.menu_active {
+	border-color: red;
+	border-bottom: solid;
+}
+
+/* content */
+.talk_outline {
+	height: 500px;
+	/*max-height: 300px;*/
+}
+.title {
+	display: table;
+	width: 100%;
+	height: 60px;
+}
+.title h3 {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+/* peeple section */
+.people_list {
+	height: 60px;
+	border-bottom: solid;
+	border-color: lightgray;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.people_list:hover {
+	background-color: lightgray;
+}
+
+/* 메시지 전송 창 */
+.msg_content {
+	width: 80%;
+	height: 80px;
+}
+.msg_gobtn {
+	height: 80px;
+	width: 20%;
+	border-radius: 0px;
+}
+
+@media ( max-width: 1200px ) {
+	.jtalk {
+		position: absolute;
+		top: 10%;
+		left: 30%;
+		outline: 1px solid black;
+		width: 35%;
+		min-width: 300px;
+	}
+	
+	.navbar {
+		background-color: #fff;
+		font-size: 6px;
+		min-width: 300px;
+	}
+
+	.menu_outline {
+	outline: 1px solid black;
+	min-width: 300px;
+	height: 50px;
+	vertical-align: middle;
+	}
+	.menu li{
+		margin-top: 10px;
+		margin-right: 5%;
+		margin-left: 5%;
+		list-style: none;
+		text-align: center;
+		float: left;
+	}
+
+	.talk_outline {
+		height: 450px;
+		/*max-height: 300px;*/
+	}
+
+	.talk_content {
+		overflow-y:scroll;
+		height: 340px;
+	}
+
+	.title {
+		display: table;
+		width: 100%;
+		height: 60px;
+		margin-bottom: -12px;
+	}
+
+	.people_list {
+		height: 50px;
+		border-bottom: solid;
+		border-color: lightgray;
+		padding-top: 5px;
+		cursor: pointer;
+	}
+	.msg_content {
+		width: 80%;
+		height: 70px;
+	}
+	.msg_gobtn {
+		height: 70px;
+		width: 20%;
+		border-radius: 0px;
+	}
+}
+
+
+
+@media ( max-width: 768px ) {
+		.jtalk {
+		position: absolute;
+		top: 10%;
+		left: 30%;
+		outline: 1px solid black;
+		width: 35%;
+		min-width: 300px;
+	}
+
+	.talk_content {
+		overflow-y:scroll;
+		height: 295px;
+	}
+	
+	.navbar {
+		background-color: #fff;
+		font-size: 6px;
+		min-width: 300px;
+		height: 50px;
+	}
+
+	.navbar-nav {
+		float: left;
+	}
+	.navbar-nav #BTN_GOOGLE_LOGIN, .navbar-nav #BTN_LOGOUT{
+		float: left;
+		margin-right: 25px;
+	    padding: 0;
+	    margin-top: 10px;
+	}
+
+	.navbar-nav #AUTH_STATE{
+	    margin-left: 15px;
+    	margin-top: 0px;
+	}
+
+
+	.menu_outline {
+	outline: 1px solid black;
+	min-width: 300px;
+	height: 50px;
+	vertical-align: middle;
+	}
+	.menu li{
+		margin-top: 10px;
+		margin-right: 5%;
+		margin-left: 5%;
+		list-style: none;
+		text-align: center;
+		float: left;
+	}
+
+	.talk_outline {
+		height: 400px;
+		/*max-height: 300px;*/
+	}
+	.title {
+		display: table;
+		width: 100%;
+		height: 60px;
+		margin-bottom: -20px;
+	}
+
+	.people_list {
+		height: 40px;
+		border-bottom: solid;
+		border-color: lightgray;
+		padding-top: 5px;
+		cursor: pointer;
+	}
+	.msg_content {
+		width: 80%;
+		height: 60px;
+	}
+	.msg_gobtn {
+		height: 60px;
+		width: 20%;
+		border-radius: 0px;
+	}
+
+}

@@ -1,0 +1,35 @@
+/*푸터*/
+.footer {
+	background-color:#646567;
+	width: 100%;
+	display: block;
+	height: 100%;
+	margin-top: -80px;
+}
+.foot_content {
+	width: 1200px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.foot_content .thumbnail {
+	background-color:#646567;
+	border:none;
+}
+.foot_content h4, .foot_content p, .foot_content h5 {
+	color: white;
+}
+.foot_content h4 {
+	font-weight: bold;
+}
+.foot_content h1 {
+	color: #F97036;
+}
+#f_logo {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.social_img img{
+	padding-right: 15px;
+	float: left;
+}

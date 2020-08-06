@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+<style media="screen">
+*{margin: 0;padding: 0;border: 0; list-style: none;}
+
+/*파란*/
+  html,body{width:100%;height: 100%;}
+  a:hover{text-decoration: none;}
+  a{color: #333!important;}
+  /*핑크*/
+  .header{position: fixed; top: 0;height: 70px; width: 100%;left: 0;z-index: 99;}
+  .logo{margin: 0 auto;padding: 25px 0 ;}
+  .logo img{display: block;margin: 0 auto;}
+
+  .wrap{width: 100%;min-height: 100%;height: 100%; position: relative; padding-top: 70px;}
+  .main_slide{width: 100%;height: 100%;overflow: hidden;}
+  .img_wrap{position: relative;}
+  .img_bx{width: 530px; height: 530px; margin: 0 auto;background: #f6f6f6; border-radius: 10px; border: 1px solid #fefefe; box-shadow:10px 10px 10px #ccc;}
+  .img_bx img{padding:  30px;}
+  .meun_box{cursor: pointer;}
+  .main_meun{width: 100%; padding-top: 70px;}
+  .main_meun ul{margin: 0 auto; width: 640px;  display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: space-around;}
+  .main_meun ul li{float: left;padding: 10px 15px; display: flex;}
+  .main_meun ul li a{ color: #000; font-weight: bold;}
+  .meun_line{width: 25px; height: 5px; background: #000; margin-bottom: 3px; border-radius: 10px;}
+  .side_menu{padding-top: 100px;}
+  .side_menu ul li{padding: 10px 0px; font-weight: bold; font-size: 18px;}
+  .side_txt{font-size: 14px; height: 520px; overflow: scroll; margin: 0; padding-right: 15px; position: relative;}
+  .now_page{position: absolute;bottom: -20px; right: 0;}
+  .container{padding-top: 70px;padding-left: 0; padding-right: 0;}
+  @media (min-width: 1200px){
+.container {
+    width: 1200px;
+}
+}
+</style>
+<body>
+  <div class="header">
+    <div class="logo">
+    <a href="#"><img src="img/logo.png" alt=""></a>
+    </div>
+
+  </div>
+    <div class="wrap">
+
+      <div class="row">
+        <div class="container">
+          <div class="col-md-3">
+            <h1>FILLER</h1>
+            <div class="side_menu">
+              <ul>
+                <li></li>
+                <li><a href="#">바디필러</a></li>
+                <li><a href="#">페이스필러</a></li>
+                <li><a href="#">깐깐한 주사실</a></li>
+                <li><a href="#">티오필</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9">
+
+              <img src="img/filler.jpg" alt="">
+
+          </div>
+
+<div class="now_page">
+1/2
+</div>
+ </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="main_meun">
+          <ul>
+            <li><a href="#">FILLER</a></li>
+            <li><a href="#">FIOFACE STORY</a></li>
+            <li><a href="#">SKIN</a></li>
+            <li><a href="#">ETC</a></li>
+            <li><a href="#">LIFTING</a></li>
+            <li><div class="meun_box">
+              <div class="meun_line"></div>
+              <div class="meun_line"></div>
+              <div class="meun_line"></div>
+            </div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+
+</body>
+
+</html>

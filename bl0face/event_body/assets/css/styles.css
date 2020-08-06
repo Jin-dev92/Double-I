@@ -1,0 +1,56 @@
+body{font-family: 'NanumSquareR',sans-serif;}
+
+.main_content{ padding-top: 100px;}
+.item_wrap{display: flex;flex-wrap: wrap;justify-content: space-around; align-items: center;}
+
+.item{max-width: 360px; min-width: 360px; margin-bottom: 50px;}
+
+.item_img_box {width: 100%;}
+.item_img_box img{width: 100%;}
+
+.item_info_box{width: 100%; min-height: 175px;padding-top: 20px; background:#2badbb; color: #fff; text-align: center; font-weight: bold; font-size: 16px;}
+.item_info_box .description{padding-top: 20px;padding: 0 10px;}
+.item_info_box span{display: block; font-weight: bold;margin-bottom: 15px;}
+.item_info_box .title{font-size: 24px;}
+.item_info_box .more_btn{padding: 5px 15px;font-weight: bold;background:#fff;color: #2badbb;font-size: 20px}
+
+.side_txt{margin-bottom: 40px;}
+.side_txt img{display: block;margin:0 auto; max-width: 100%; min-width: 400px;}
+
+.info_head{padding-top: 50px; padding-bottom: 50px; border-bottom: 2px solid #000;}
+.item_info_img img{width: 100%;}
+.item_info_txt{line-height: 20px; font-weight: bold;}
+.item_info_txt .row{padding-bottom: 10px;}
+.info_title{border-bottom: 1px solid #000;margin-bottom: 20px;}
+.info_title h1{font-size: 3.6em;}
+.info_title p{font-weight: bold;}
+.info_unique{border-bottom: 1px solid #000;padding-bottom: 20px;}
+form{font-weight: bold;}
+input{padding: 2px 5px; max-width: 100%;}
+select{padding: 4px 10px;}
+.forms{padding-bottom: 40px;}
+.forms .row{padding:10px 0;}
+.forms h1{text-align: center;padding: 20px 0;}
+.forms .row{max-width: 800px; display: block; margin: 0 auto;}
+.agree{margin-right: 10px; display: inline-block;}
+.phone input{width: 100px;margin-left: 10px;}
+textarea{width: 300px; height: 100px;max-width: 100%;}
+.button_wrap{margin: 0 auto; float: none; clear: both; display: flex;}
+.col-xs-6 button{background: #2badbb; padding: 6px 16px; color: #fff; font-size: 16px; display: inline-block; margin: 0 auto;}
+.sub_img img{ margin: 0 auto; max-width: 100%; display: block;}
+.kakao a{color: #fff;}
+.gohome a{color: #fff}
+.submit{background: #2badbb; padding: 10px 20px; color: #fff; font-size: 16px; display: inline-block; margin: 0 auto; display: block; margin: 0 auto;}
+.forPc{display: block!important;}
+.forM{display: none!important;}
+.youtube{display: block;margin: 0 auto; margin-bottom: 40px;}
+@media (max-width:768px) {
+  .popup{top: 80px!important;}
+  .item{padding: 0 5px; min-width:0!important;}
+  .button_wrap{width: 100%!important;}
+  .forPc{display: none!important;}
+  .forM{display: block!important;}
+  .description{font-size: 10px!important; width: 100%;float: left;}
+  .title{font-size: 20px!important;width: 100%;float: left;}
+  .item_info_box .more_btn{font-size: 14px!important;}
+}

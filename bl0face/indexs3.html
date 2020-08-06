@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+<style media="screen">
+*{margin: 0 0 0 0;padding: 0 0 0 0;border: 0; padding-left: 0;padding-right: 0;margin-left: 0;margin-right: 0;}
+html,body{width: 100%;height: 100%;}
+.wrap{width: 100%;height: 100%;position: relative;}
+.main_wrap{width: 100%;height: 100%;position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;}
+.main_right , .main_left{overflow: hidden; height: 100%;}
+h1{transform: rotateX(-10deg);position: absolute;top: 200px; left: 100px;}
+.main_right img{width: 100%;}
+.main_left img{width: 100%;}
+.row{margin-left: 0;margin-right: 0;}
+
+</style>
+<body>
+<div class="wrap">
+  <div class="row main_wrap">
+    <?
+    include'./Snoopy.class.php';
+
+    $sn = new Snoopy;
+    $url = 'http://order.pay.naver.com/purchaseReview/checkout/272141/1';
+    $sn->fetch($url);
+    $res = $sn -> $result;
+    $res = iconv("euc-kr","UTF-8",$res);
+    $doma = explode('<ul class="buy_rating_lst">');
+    $doma2 = explode("</ul>",$doma[1]);
+    // $text = preg_match('/<dt>(.*)?<\/dt>/is',$sn->results,$text);
+
+
+    echo $doma2[0];
+?>
+
+  </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+</body>
+
+</html>
