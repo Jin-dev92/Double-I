@@ -1,0 +1,240 @@
+<!--
+#########################################################################################
+	프로그램  명     :	sample_card.html
+	프로그램설명     :	신용카드 - 주문요청
+	작성일           :	2011-09-22
+	작성자           :	hawoon
+#########################################################################################
+-->
+<html>
+<head>
+<title>신용카드 - 주문요청 테스트페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" accept-charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache"/> 
+<meta http-equiv="Expires" content="0"/> 
+<meta http-equiv="Pragma" content="no-cache"/> 
+ 
+<script language="javascript"> 
+var pf;
+ 
+function init() {
+	pf = document.frmConfirm
+	pf.ORDERNO.value= getTimeStamp();
+}
+ 
+function fnSubmit() {
+	var fileName;
+	fileName = "http://ssl.daoupay.com/creditCard/DaouCreditCardMng.jsp";		
+	
+	pf = document.frmConfirm
+	
+	DAOUPAY = window.open("", "DAOUPAY", "width=469,height=507");
+	DAOUPAY.focus();
+ 
+	pf.target = "DAOUPAY";
+	pf.action = fileName;
+	pf.method = "post";
+	pf.submit();
+}
+ 
+ 
+function fnCheck() {	
+ 
+	var frm = document.frmConfirm;
+	
+	//주문번호
+	if(trim(frm.ORDERNO.value) == "" || getByteLen(frm.ORDERNO.value) > 50) {
+		alert("주문번호 (ORDERNO) 를 입력해주세요. (최대:50byte, 현재:" + getByteLen(frm.ORDERNO.value) + ")");
+		return;
+	}
+	//상품구분
+	if(trim(frm.PRODUCTTYPE.value) == "" || getByteLen(frm.PRODUCTTYPE.value) > 2) {
+		alert("상품구분 (PRODUCTTYPE) 를 입력해주세요. (최대:2byte, 현재:" + getByteLen(frm.PRODUCTTYPE.value) + ")");
+		return;
+	}
+	//과금유형
+	if(trim(frm.BILLTYPE.value) == "" || getByteLen(frm.BILLTYPE.value) > 2) {
+		alert("과금유형 (BILLTYPE) 를 입력해주세요. (최대:2byte, 현재:" + getByteLen(frm.BILLTYPE.value) + ")");
+		return;
+	}
+	//결제금액
+	if(trim(frm.AMOUNT.value) == "" || getByteLen(frm.AMOUNT.value) > 10) {
+		alert("결제금액 (AMOUNT) 를 입력해주세요. (최대:10byte, 현재:" + getByteLen(frm.AMOUNT.value) + ")");
+		return;
+		
+	}
+	/********************  필수 입력 체크 끝  ***/
+}
+ 
+	   
+function trim(txt) {
+	while (txt.indexOf(' ') >= 0) {
+		txt = txt.replace(' ','');
+	}
+	return txt;
+}
+ 
+function getTimeStamp() {
+	var d = new Date();
+	var month = d.getMonth() + 1;
+	var date = d.getDate();
+	var hour = d.getHours();
+	var minute = d.getMinutes();
+	var second = d.getSeconds();
+ 
+	month = (month < 10 ? "0" : "") + month;
+	date = (date < 10 ? "0" : "") + date;
+	hour = (hour < 10 ? "0" : "") + hour;
+	minute = (minute < 10 ? "0" : "") + minute;
+	second = (second < 10 ? "0" : "") + second;
+ 
+	var s = d.getFullYear() + month + date + hour + minute + second;
+ 
+	return s;
+}
+ 
+function getByteLen(p_val) {
+	var onechar;
+	var tcount = 0;
+	
+	for(i = 0; i < p_val.length; i++) {
+		onechar = p_val.charAt(i);
+		if(escape(onechar).length > 4)
+			tcount += 2;
+		else if(onechar != '\r')
+			tcount++;
+	}
+	return tcount;
+}
+ 
+function fnNumCheck() {
+	if(event.keyCode >= 48 && event.keyCode <= 57)
+		event.returnValue = true;
+	else
+		event.returnValue = false;
+}
+ 
+</script>
+ 
+</head>
+ 
+<BODY onLoad="init();">
+ 
+<form name="frmConfirm"  accept-charset="utf-8"> 
+결제방법 : 신용카드 결제<br><br><br>
+<!--------------------------------------------------------------------------------------------
+ * ORDERNO : 주문번호 [필수항목]
+ * 주문번호를 입력하시면 됩니다. 
+---------------------------------------------------------------------------------------------->
+CPID : <input type="text" name="CPID" size="50" maxlength="50" value="발급 후 사용하세요" style="IME-MODE:disabled"><br>
+<!--------------------------------------------------------------------------------------------
+ * ORDERNO : 주문번호 [필수항목]
+ * 주문번호를 입력하시면 됩니다. 
+---------------------------------------------------------------------------------------------->
+주문번호 : <input type="text" name="ORDERNO" size="50" maxlength="50"value="" style="IME-MODE:disabled"><br>
+<!--------------------------------------------------------------------------------------------
+ * PRODUCTTYPE : 상품구분 [필수항목]
+ * 상품구분을 입력하시면 됩니다. 
+---------------------------------------------------------------------------------------------->
+상품구분 : <input type="text" name="PRODUCTTYPE" size="10" maxlength="2" value="1" style="IME-MODE:disabled"><br>
+<!--------------------------------------------------------------------------------------------
+ * BILLTYPE : 과금유형(1:일반) [필수항목]
+ * 과금유형을 입력하시면 됩니다. 
+---------------------------------------------------------------------------------------------->
+과금유형 : <input type="text" name="BILLTYPE" size="10" maxlength="2"  value="1" style="IME-MODE:disabled"><br>
+<!--------------------------------------------------------------------------------------------
+ * AMOUNT : 결제금액[필수항목]
+ * 결제금액을 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+결제금액 : <input type="text" name="AMOUNT" size="10" maxlength="10" value="1000" style="IME-MODE:disabled" onkeypress="fnNumCheck();"><br>
+<!--------------------------------------------------------------------------------------------
+ * EMAIL : 고객 E-MAIL(결제결과 통보 Default) [선택항목]
+ * 고객 E-MAIL를 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+고객 E-MAIL : <input type="text" name="EMAIL" size="100" maxlength="100" value=""><br>
+<!--------------------------------------------------------------------------------------------
+ * USERID : 고객ID [선택항목]
+ * 고객아이디를 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+고객아이디 : <input type="text" name="USERID" size="30" maxlength="30" value="testuserid"><br>
+<!--------------------------------------------------------------------------------------------
+ * USERNAME : 고객명 [선택항목]
+ * 고객명를 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+고객명 : <input type="text" name="USERNAME" size="50" maxlength="50" value="테스터"><br>
+<!--------------------------------------------------------------------------------------------
+ * PRODUCTCODE : 상품코드 [선택항목]
+ * 상품코드를 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+상품코드 : <input type="text" name="PRODUCTCODE" size="10" value="P0001"><br>
+<!--------------------------------------------------------------------------------------------
+ * PRODUCTNAME : 상품명[선택항목]
+ * 상품명을 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+상품명 : <input type="text" name="PRODUCTNAME" size="50" value="게임머니"><br>
+<!--------------------------------------------------------------------------------------------
+ * TELNO1 : 고객전화번호[선택항목]
+ * 고객전화번호를 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+고객전화번호 : <input type="text" name="TELNO1" size="50" value="021234567"><br>
+<!--------------------------------------------------------------------------------------------
+ * TELNO2 : 고객휴대폰번호[선택항목]
+ * 고객휴대폰번호를 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+고객휴대폰번호 : <input type="text" name="TELNO2" size="50" value="01022221111"><br>
+<!--------------------------------------------------------------------------------------------
+ * RESERVEDINDEX1 : 예약항목1(내부에서 INDEX로 관리)[선택항목]
+ * 예약항목1을 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+예약항목1 : <input type="text" name="RESERVEDINDEX1" size="20" value="RESERVEDATA1"><br>
+<!--------------------------------------------------------------------------------------------
+\
+ * RESERVEDINDEX2 : 예약항목2(내부에서 INDEX로 관리)[선택항목]
+ * 예약항목2를 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+예약항목2 : <input type="text" name="RESERVEDINDEX2" size="20" value="RESERVEDATA2"><br>
+<!--------------------------------------------------------------------------------------------
+ * RESERVEDSTRING : 예약항목(내부에서 INDEX로 관리)[선택항목]
+ * 예약항목을 입력하시면 됩니다.
+---------------------------------------------------------------------------------------------->
+예약항목:<input type="text" name="RESERVEDSTRING" size="100" value="RESERVESTRING"><br>
+<!--------------------------------------------------------------------------------------------
+ * RETURNURL : 결제완료 url[선택항목]
+ * 결제 완료 후, 이동할 url(팝업으로 결제창을 오픈한 메인 화면)
+----------------------------------------------------------------------------------------------><br>
+RETURNURL:<input type=text name=RETURNURL value="">
+<!--------------------------------------------------------------------------------------------
+ * HOMEURL : 결제완료 url[선택항목]
+ * 결제 완료 후, 이동할 url(팝업)
+----------------------------------------------------------------------------------------------><br>
+HOMEURL:<input type=text name=HOMEURL value="">
+<!--------------------------------------------------------------------------------------------
+ * DIRECTRESULTFLAG : 결제완료 url[필수항목]
+ * 결제 완료 후, 이동할 url(팝업)
+----------------------------------------------------------------------------------------------><br>
+DIRECTRESULTFLAG:<input type=text name=DIRECTRESULTFLAG value="">
+<!--------------------------------------------------------------------------------------------
+ *  : 비과세결제유무[선택항목]
+ * 결제하려는 금액의 과세유무
+----------------------------------------------------------------------------------------------><br>
+비과세결제유무(과세 테스트 <font color='blue'>00</font>, 비과세 테스트 : <font color='red'>01</font>):<input type=text name=TAXFREECD value="00">
+<br><br><br>
+나머지 상점 옵션값 <br>
+kcp_noint : <input type=text name=kcp_noint value=""><br>
+kcp_noint_quota  : <input type=text name=kcp_noint_quota   value=""><br>
+QUOTAOPT         : <input type=text name=quotaopt         value=""><br>
+fix_inst         : <input type=text name=fix_inst         value=""><br>
+not_used_card    : <input type=text name=not_used_card    value=""><br>
+save_ocb         : <input type=text name=save_ocb         value=""><br>
+used_card_YN         : <input type=text name=used_card_YN   value=""><br>
+used_card         : <input type=text name=used_card         value=""><br>
+eng_flag         : <input type=text name=eng_flag         value=""><br>
+kcp_site_logo	 : <input type=text name=kcp_site_logo         value="">(카드결제창 좌측상단 노출될 이미지(미입력시 다우페이 이미지  출력))<br>
+kcp_site_img	 : <input type=text name=kcp_site_img         value="">(카드결제창 좌측하당 노출될 이미지(미입력시 다우페이 이미지 출력))<br>
+ 
+<input name="btnSubmit" type="button" value="주문하기" onclick="fnSubmit()" width="63" height="30"><br>
+</form>
+</BODY>
+</HTML>
+ 
+

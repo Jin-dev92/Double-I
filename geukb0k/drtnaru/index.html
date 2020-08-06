@@ -1,0 +1,143 @@
+<?php include("header.html");?>
+
+<div id="contentwrap">
+
+
+
+
+
+<div class="slider" id="visual">
+	<ul class="slides js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay":9000 }' >
+    	<li class="cont" style="background-image:url(./1.jpg);">
+			<div class="box">
+				<h2>DRT.Naru</h2>
+				<div class="textBox" style="height:150px; width:380px; line-height:28px;">
+						<span style="font-size:24px;">헌신, 존중, 신뢰<br>모두를 생각합니다.</span></div>
+
+			</div>
+			<!-- //box -->
+
+		</li>
+
+
+
+
+    	<li class="cont" style="background-image:url(./2.jpg);">
+			<div class="box">
+				<h2>DRT.Naru</h2>
+				<div class="textBox" style="height:150px; width:380px; line-height:28px;">
+						<span style="font-size:24px;">For the better effect<br>Less the side effect</span></div>
+
+			</div>
+			<!-- //box -->
+
+		</li>
+
+
+
+
+    	<li class="cont" style="background-image:url(./3.jpg);">
+			<div class="box">
+				<h2>DRT.Naru</h2>
+				<div class="textBox" style="height:150px; width:380px; line-height:28px;">
+						<span style="font-size:24px;">병원 개원의 A-Z,<br>그에 대한 올바름</span></div>
+
+			</div>
+			<!-- //box -->
+
+		</li>
+
+
+
+
+    	<li class="cont" style="background-image:url(./4.jpg);">
+			<div class="box">
+				<h2>DRT.Naru</h2>
+				<div class="textBox" style="height:150px; width:380px; line-height:28px;">
+						<span style="font-size:24px;">궁금한 사항들<br>
+언제든지 물어보세요!</span></div>
+
+			</div>
+			<!-- //box -->
+
+		</li>
+
+
+
+
+
+
+
+	</ul>
+	<!-- //slide -->
+</div>
+<div class="circle_box">
+    <div class="cir_graph" >
+        <div class="pie_progress02" role="progressbar" data-goal="-50" data-barcolor="#fff" data-barsize="2" aria-valuemin="-100" aria-valuemax="400"></div>
+    </div>
+    <!-- //cir_graph -->
+    <div class="cir_graph" >
+        <div class="pie_progress" role="progressbar" data-goal="-50" data-barcolor="#CF3624" data-barsize="2" aria-valuemin="-100" aria-valuemax="400"></div>
+    </div>
+    <!-- //cir_graph -->
+  <p class="mainMore"><a href="#"><img src="./img/moreBtn.png" alt="자세히 보기"></a></p>
+</div><!--//circle_box-->
+
+</div><!--//contentwrap-->
+<style>
+#bottom {
+	width:100%;
+	position: fixed;
+	height: 60px;
+	z-index: 1001;
+	min-width:1200px;
+	margin:0 auto;
+	bottom: 0;
+	font-size: 12px;
+	line-height: 30px;
+	color: #999999;
+	font-weight: 600;
+}
+#bottom .text{
+	border-top:1px solid #d01c24;
+	text-align: left;
+	width:1200px;
+	margin:0 auto;
+}
+</style>
+<div id="bottom" >
+		<div class="text"><span>2017 DRT.NARU</span> <span style="color:red; margin-left:10px;">RECRUIT</span></div>
+</div>
+
+<script src="./js/skrollr.js"></script>
+<script src="./js/waypoints.min.js"></script>
+<script src="./js/Timer.js"></script>
+
+<script>
+var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1},c:2};
+function $buo_f(){
+ var e = document.createElement("script");
+ e.src = "//browser-update.org/update.js";
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+ <script>
+    $('body').show();
+
+  //  $('.version').text(NProgress.version);
+
+    NProgress.start();
+
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); },100);
+
+    $('input, textarea').placeholder();
+
+
+
+  </script>
+
+</div>
+</body>
+</html>

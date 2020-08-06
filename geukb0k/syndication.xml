@@ -1,0 +1,54 @@
+---
+layout: null
+---
+<feed xmlns="http://webmastertool.naver.com">
+  <!-- 피드 문서를 담고있는 카테고리 URL -->
+  <id>{{- '/' | absolute_url -}}</id>
+  <!-- 피드 문서를 나타내는 제목 -->
+  <title>Syndication Document</title>
+  <!-- 작성자 정보 -->
+  <author>
+    <name>{{- site.author -}}</name>
+    <url>{{- '/' | absolute_url -}}</url>
+    <email>{{- site.email -}}</email>
+  </author>
+  <!-- 신디케이션 문서 작성 시간 -->
+  <updated>{{- site.time | date_to_xmlschema -}}</updated>
+  <!-- 웹사이트 정보 -->
+  <link rel="site" href="{{- '/' | absolute_url -}}" title="{{- site.sitename -}}"/>
+  <!-- 포스팅 정보 (최대 100개, 50MB 이하로 제한) -->
+  {% for post in site.posts limit:100 %}
+  <entry>
+    <id>
+      {{ post.url | prepend: site.baseurl | prepend: site.url }}
+    </id>
+    <title>
+      <![CDATA[ {{ post.title | xml_escape }} ]]>
+    </title>
+    <author>
+      <name>{{- site.author -}}</name>
+    </author>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <link rel="via" href="{{- '/' | absolute_url -}}" title="{{- site.sitename -}}"/>
+    <!-- 포스트 내용 HTML -->
+    <content type="html">
+    <![CDATA[
+    {{ post.content }}
+    ]]>
+    <!-- 포스트 내용 TEXT -->
+    </content>
+    <summary type="text">
+    <![CDATA[
+    {{- post.excerpt | strip_html | truncatewords: 100 -}}
+    ]]>
+    </summary>
+    <!-- 포스트 카테고리 -->
+    <category term="category" label="category"/>
+  </entry>
+  {%- endfor -%}
+  <!-- 삭제된 포스팅 정보 -->
+  <!--
+  <deleted-entry ref="http://www.syndi-example.com/bbs/board.php?bo_table=search_info&id=11" when="2016-06-26T00:10:05+09:00"/>
+  -->
+</feed>

@@ -1,0 +1,142 @@
+/*1280~1024*/
+#header { position:absolute; }
+#header dl { padding-right:30px;}
+#header h1 { padding-left:30px;}
+#header.show { position:fixed; height:58px; }
+
+.content { width:100%; }
+.wArea { width:960px; margin:auto; position:relative;   }
+
+.container02 li { width:320px;}
+
+.content .linear { transition:all 200ms linear;
+ -webkit-transition:all 200ms linear;
+ -moz-transition:all 200ms linear;
+ -ms-transition:all 200ms linear;
+ -o-transition:all 200ms linear;}
+
+.content .work_more a:hover {background:#d01c24 url(./img/more_work.png) center no-repeat;}
+.container03 ul > li { height:350px;}
+
+.circle_box { width:450px; height:450px; margin-left:-225px; margin-top:-225px;}
+
+.slides .cont .box { width:380px; height:420px; margin-top:-120px; padding:0 0px; margin-left:-190px;  }
+.slides .cont .box h2 { font-size:45px;}
+.slides .cont .box p { padding:0px}
+.slides .cont .box .textBox{padding:15px;font-size: 15px; height:150px;}
+
+.etcFix{width: 100%;padding:0 100px;box-sizing:border-box;}
+.etcFix h2{font-size:30px;}
+.etcFix h3{font-size:17px;}
+
+
+.flickity-page-dots {
+  margin-left:-227px;
+  margin-top:-227px;
+  width:454px;
+  height:454px;
+}
+.flickity-page-dots .dot:nth-child(4){top:-2px;left:219px;}
+.flickity-page-dots .dot:nth-child(1){top:219px;left:445px;}
+.flickity-page-dots .dot:nth-child(2){top:445px;left:219px;}
+.flickity-page-dots .dot:nth-child(3){top:219px;left:-2px;}
+
+
+
+.slider .downBtn { margin-left:-30px;}
+.slider .downBtn img { width:60px;}
+
+.subVisual .taBox .mm01 img{ width:40px; margin-top:60px;}
+
+/*회사소개*/
+
+#boxWrapp .subVisual { height:580px;}
+
+#boxWrapp .abc .container03 li {height:456px;  }
+#boxWrapp .subVisual .title { margin-top:-60px;}
+#boxWrapp .title h2 { font-size:70px; line-height:70px;}
+
+/*포트폴리오*/
+#boxWrapp .work .ff > li { width:33.3%;}
+
+
+
+/*contact*/
+.contact .ff > li li{min-height: 60px;padding: 10px 0;margin-right: 30px;border-bottom: 1px solid #d5333a; margin-left:20px;}
+.mapBox .map_wrapper{height: 500px;}
+.contact .send_from { margin-right:20px;}
+
+/*포트폴리오 상세페이지*/
+
+/* 레이아웃 */
+
+.work_view .textBox { padding-left:20px; padding-right:20px;}
+.work_view .imgBox img { max-width:100%; position: relative; bottom:0px;}
+.work_view .section01 .right_view_img { padding:60px 20px;}
+.work_view	.Feature_list { padding-left:20px;}
+
+.work_view .textBox .st { float:left; width:550px;}
+.work_view	.designer { padding-left:20px;}
+
+
+
+/*프로젝트 의뢰*/
+.project_area {   width:630px; margin-right:330px; }
+.project_request { padding:30px;  }
+.work_view .taBox { display:none;}
+.project_request .project_header h2 { font-size:30px; font-weight:300; color:#fff; line-height:30px;  }
+
+
+/* news */
+
+#boxWrapp .news_list .cw{ width:100%;padding:0 20px;box-sizing:border-box;}
+#boxWrapp .news_list .title p{width:10%;font-size:16px;padding: 20px 0;}
+#boxWrapp .news_list .title p span{font-size: 16px;padding-top: 0px;}
+#boxWrapp .news_list .title dl{width:90%;padding-left:20px;padding-right:15px;box-sizing:border-box;}
+#boxWrapp .news_list .title dt{font-size:20px;padding-top: 25px;line-height:15px;}
+#boxWrapp .news_list .title dd{font-size:13px;padding-top:5px;padding-bottom:20px;}
+#boxWrapp .news_list .title .arrow{background-size:100%;width:20px;height:10px;top:40px;right:20px;}
+
+#boxWrapp .news_list .content { padding:50px 0;}
+#boxWrapp .news_list .textBox .ct {
+    font-size: 16px;
+    top: -20px;
+}
+#boxWrapp .news_list .content .textBox {
+    width: 100%;
+    float: none;
+}
+#boxWrapp .news_list .content .imgBox {
+    width: 100%;
+    float: none;
+	text-align:center;
+	padding-top: 50px;
+}
+#boxWrapp .news_list .content .imgBox img{width: 50%;}
+#boxWrapp .news_list .content .closeBtn {
+    width: 18px;
+    height:18px;
+    background-size:100%;
+    top: -20px;
+    right: 20px;
+}
+#boxWrapp .news_list .textBox .tt {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+#boxWrapp .news_list .textBox dt {
+    width: 40px;
+    font-size: 14px;
+}
+#boxWrapp .news_list .textBox dd {
+    font-size: 14px;
+}
+#boxWrapp .news_list .textBox .st {
+    padding-bottom: 15px;
+}
+#boxWrapp .news_list .textBox p {
+    font-size: 14px;
+}
+#boxWrapp .news_list {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,142 @@
+ /*커스텀 인풋전체 공통*/
+.custom-input input{
+float: right;
+width: 0;
+height: 0;
+filter: alpha(opacity=0);
+opacity: 0;
+}
+
+/********************************************************************************/
+
+.heapBox
+{
+clear:both;
+vertical-align: middle;
+display:inline-block;
+margin:0 7px;
+*zoom:1;
+*display:inline;
+line-height:27px;
+position:relative;
+z-index:9999;
+}
+.heapBox *
+{
+margin:0;
+padding:0;
+}
+.heapBox.disabled .handler
+{
+background:url(../../gfx/heapbox_bg.jpg) repeat-x;
+}
+
+.heapBox a{
+display:block;
+text-indent:9px;
+text-decoration:none;
+color:#949494;
+background:white;
+}
+
+.heapBox .holder
+{
+width:115px;
+overflow:hidden;
+text-indent:9px;
+border-right:none;
+height:27px;
+}
+
+.heapBox .handler
+{
+width:25px;
+background:url(/images/select_box_arrow.png) no-repeat;
+height:27px;
+border:1px solid #dfdfdf;
+border-left:none;
+
+}
+
+.heapBox .holder,.heapBox .handler
+{
+float:left;
+position:relative;
+z-index:10;
+}
+
+.heapBox div.heap
+{
+display:none;
+position:absolute;
+list-style-type:none;
+left:0;
+width:140px;
+top:29px;
+overflow:hidden;
+border:1px solid #dfdfdf;
+border-top:none;
+}
+
+.heapBox .heap .heapOptions
+{
+display:block;
+}
+
+.heapBox .heap .heapOptions .heapOption
+{
+z-index:20;
+position:relative;
+display:block;
+height:27px;
+}
+.heapBox .selected{
+	background:#ed7f7f;
+	color:white;
+}
+   
+
+/*셀렉트1*/
+.heapBox.select_bk {
+	width:100%;
+	height:23px;
+	border:1px solid #6d6f78;
+	margin-left:0;
+	background:#3d404d;
+}
+.heapBox.select_bk .holder {
+	width:130px;
+	height:23px;
+	line-height:23px;
+	color:#ddd;
+	background:#3d404d;
+}
+.heapBox.select_bk div.heap {
+	top:24px;
+	width:100%;
+	left:-1px;
+	z-index:9999;
+	border:1px solid #6d6f78;
+	border-top:none;
+	background:#3d404d;
+}
+.heapBox.select_bk .selected {
+	background:#333;
+	color:#fff;
+}
+.heapBox.select_bk .handler {
+	position:absolute;
+	top:0;
+	right:0;
+	width:28px;
+	height:23px;
+	border:0;
+	background:url(../images/select_bk_arrow.gif) no-repeat center 9px #3d404d;
+}  
+  
+.heapBox.select_bk a{
+display:block;
+text-decoration:none;
+color:#ddd;
+background:#3d404d;
+}  

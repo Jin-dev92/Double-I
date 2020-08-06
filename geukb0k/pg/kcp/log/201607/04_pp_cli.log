@@ -1,0 +1,30 @@
+0704-091736 - 27925 - T0000749Ha8c05d2 - MSG : TX_START - site_cd=[T0000]+tx_cd=[00200000]+ordr_idxx=[]+log_level=[3]
+0704-091736 - 27925 - T0000749Ha8c05d2 - MSG : PG_서버_접속__정상
+0704-091736 - 27925 - T0000749Ha8c05d2 - MSG : PG_서버_요청_전문_전송__정상
+0704-091737 - 27925 - T0000749Ha8c05d2 - MSG : PG_서버_응답_전문_수신__정상
+0704-091737 - 27925 - T0000749Ha8c05d2 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=T0000749Ha8c05d2pay_method=PACAorder_no=160704000002card_cd=CCLOcard_name=롯데카드acqu_cd=CCAMacqu_name=롯데아멕스카드mcht_taxno=1138521083mall_taxno=1138521083ca_order_id=160704000002tno=16816900341506amount=10000card_mny=10000coupon_mny=0escw_yn=Ncanc_gubn=Bvan_cd=VNKCapp_time=20160704091737van_apptime=20160704091737canc_time=20160704091737app_no=49886864bizx_numb=9050103035quota=00noinf=Npg_txid=0704091737MP01AEN7SCB60000000100000049886864]
+0704-091739 - 27934 - T0000749Hd8c05d2 - MSG : TX_START - site_cd=[T0000]+tx_cd=[00200000]+ordr_idxx=[]+log_level=[3]
+0704-091739 - 27934 - T0000749Hd8c05d2 - MSG : PG_서버_접속__정상
+0704-091739 - 27934 - T0000749Hd8c05d2 - MSG : PG_서버_요청_전문_전송__정상
+0704-091739 - 27934 - T0000749Hd8c05d2 - MSG : PG_서버_응답_전문_수신__정상
+0704-091739 - 27934 - T0000749Hd8c05d2 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=T0000749Hd8c05d2pay_method=PACAorder_no=160704000001card_cd=CCLOcard_name=롯데카드acqu_cd=CCAMacqu_name=롯데아멕스카드mcht_taxno=1138521083mall_taxno=1138521083ca_order_id=160704000001tno=16816900341481amount=7000card_mny=7000coupon_mny=0escw_yn=Ncanc_gubn=Bvan_cd=VNKCapp_time=20160704091740van_apptime=20160704091740canc_time=20160704091740app_no=67528926bizx_numb=9050103035quota=00noinf=Npg_txid=0704091740MP01ACN7N09Y0000000070000067528926]
+0704-114222 - 13124 - T000074Bfe8c05d2 - MSG : TX_START - site_cd=[T0000]+tx_cd=[00100000]+ordr_idxx=[160704000006]+log_level=[3]
+0704-114222 - 13124 - T000074Bfe8c05d2 - MSG : PG_서버_접속__정상
+0704-114222 - 13124 - T000074Bfe8c05d2 - MSG : PG_서버_요청_전문_전송__정상
+0704-114222 - 13124 - T000074Bfe8c05d2 - MSG : PG_서버_응답_전문_수신__정상
+0704-114222 - 13124 - T000074Bfe8c05d2 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=T000074Bfe8c05d2pay_method=PACAorder_no=160704000006card_cd=CCLOcard_name=롯데카드acqu_cd=CCAMacqu_name=롯데아멕스카드card_no=9409150000004241mcht_taxno=1138521083mall_taxno=1138521083ca_order_id=160704000006tno=16816900342754amount=10000card_mny=10000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20160704114223van_apptime=20160704114223app_no=57226398bizx_numb=9050103035quota=00noinf=Npg_txid=0704114223MP01AHNFR03D0000000100000057226398res_tax_flag=TG03res_tax_mny=9090res_free_mny=0res_vat_mny=910partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0join_cd=0000]
+0704-120314 - 37073 - T000074C3E8c05d2 - MSG : TX_START - site_cd=[T0000]+tx_cd=[00200000]+ordr_idxx=[]+log_level=[3]
+0704-120314 - 37073 - T000074C3E8c05d2 - MSG : PG_서버_접속__정상
+0704-120314 - 37073 - T000074C3E8c05d2 - MSG : PG_서버_요청_전문_전송__정상
+0704-120314 - 37073 - T000074C3E8c05d2 - MSG : PG_서버_응답_전문_수신__정상
+0704-120314 - 37073 - T000074C3E8c05d2 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=T000074C3E8c05d2pay_method=PACAorder_no=160704000006card_cd=CCLOcard_name=롯데카드acqu_cd=CCAMacqu_name=롯데아멕스카드mcht_taxno=1138521083mall_taxno=1138521083ca_order_id=160704000006tno=16816900342754amount=10000card_mny=10000coupon_mny=0escw_yn=Ncanc_gubn=Bvan_cd=VNKCapp_time=20160704120315van_apptime=20160704120315canc_time=20160704120315app_no=57226398bizx_numb=9050103035quota=00noinf=Npg_txid=0704120315MP01AHNFR03D0000000100000057226398]
+0704-135102 - 55182 - T000074DlMAR2o43 - MSG : TX_START - site_cd=[T0000]+tx_cd=[00100000]+ordr_idxx=[160704000006]+log_level=[3]
+0704-135102 - 55182 - T000074DlMAR2o43 - MSG : PG_서버_접속__정상
+0704-135102 - 55182 - T000074DlMAR2o43 - MSG : PG_서버_요청_전문_전송__정상
+0704-135103 - 55182 - T000074DlMAR2o43 - MSG : PG_서버_응답_전문_수신__정상
+0704-135103 - 55182 - T000074DlMAR2o43 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=T000074DlMAR2o43pay_method=PACAorder_no=160704000006card_cd=CCBCcard_name=BC카드acqu_cd=CCBCacqu_name=BC카드card_no=5480200000004242mcht_taxno=1138521083mall_taxno=1138521083ca_order_id=160704000006tno=16816900343629amount=10000card_mny=10000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20160704135103van_apptime=20160704135103app_no=31959668bizx_numb=725479023quota=00noinf=Npg_txid=0704135103MP01AENKCGVN0000000100000031959668res_tax_flag=TG03res_tax_mny=9090res_free_mny=0res_vat_mny=910partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=1isp_issuer_cd=BC20isp_issuer_nm=우리비씨isp_partner_cd=050100202253481join_cd=0000]
+0704-142216 - 25678 - T000074ELdAR2o43 - MSG : TX_START - site_cd=[T0000]+tx_cd=[00100000]+ordr_idxx=[160704000007]+log_level=[3]
+0704-142216 - 25678 - T000074ELdAR2o43 - MSG : PG_서버_접속__정상
+0704-142216 - 25678 - T000074ELdAR2o43 - MSG : PG_서버_요청_전문_전송__정상
+0704-142217 - 25678 - T000074ELdAR2o43 - MSG : PG_서버_응답_전문_수신__정상
+0704-142217 - 25678 - T000074ELdAR2o43 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=T000074ELdAR2o43pay_method=PACAorder_no=160704000007card_cd=CCBCcard_name=BC카드acqu_cd=CCBCacqu_name=BC카드card_no=5480200000004242mcht_taxno=1138521083mall_taxno=1138521083ca_order_id=160704000007tno=16816900343823amount=10000card_mny=10000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20160704142217van_apptime=20160704142217app_no=63321394bizx_numb=725479023quota=00noinf=Npg_txid=0704142217MP01AENLGMX90000000100000063321394res_tax_flag=TG03res_tax_mny=9090res_free_mny=0res_vat_mny=910partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=1isp_issuer_cd=BC20isp_issuer_nm=우리비씨isp_partner_cd=050100202253481join_cd=0000]

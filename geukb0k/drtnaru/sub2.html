@@ -1,0 +1,72 @@
+<?php include("header.html");?>
+<div id="contentwrap">
+  <div class="slider" id="visual">
+    <div style="background-image:url(./img/sub2.jpg);" class="subwrap">
+
+    </div>
+
+  </div>
+</div><!--//contentwrap-->
+<style>
+.subwrap{
+    position: absolute;
+    width: 100% !important;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    background-position: 50%;}
+#bottom {
+	width:100%;
+	position: fixed;
+	height: 60px;
+	z-index: 1001;
+	min-width:1200px;
+	margin:0 auto;
+	bottom: 0;
+	font-size: 12px;
+	line-height: 30px;
+	color: #999999;
+	font-weight: 600;
+}
+#bottom .text{
+	border-top:1px solid #d01c24;
+	text-align: left;
+	width:1200px;
+	margin:0 auto;
+}
+</style>
+<div id="bottom" >
+		<div class="text"><span>2017 DRT.NARU</span> <span style="color:red; margin-left:10px;">RECRUIT</span></div>
+</div>
+<script src="./js/skrollr.js"></script>
+<script src="./js/waypoints.min.js"></script>
+<script src="./js/Timer.js"></script>
+
+<script>
+var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1},c:2};
+function $buo_f(){
+ var e = document.createElement("script");
+ e.src = "//browser-update.org/update.js";
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+ <script>
+    $('body').show();
+
+  //  $('.version').text(NProgress.version);
+
+    NProgress.start();
+
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); },100);
+
+    $('input, textarea').placeholder();
+
+
+
+  </script>
+
+</div>
+</body>
+</html>

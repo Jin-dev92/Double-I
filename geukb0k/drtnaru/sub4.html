@@ -1,0 +1,97 @@
+<?php include("header.html");?>
+<div id="contentwrap">
+  <div class="slider" id="visual">
+    <div style="background-image:url(./img/sub4.jpg);" class="subwrap">
+      <div class="inputbox">
+        <form class="" action="index.html"  method="post">
+          <li><label for="name">이름</label><input type="text" name="name" id="name" value=""></li>
+          <li><label for="charge">담당자</label><input type="text" name="charge" id="charge" value=""></li>
+          <li><label for="pw">비밀번호</label><input type="password" name="pw" id="pw" value=""></li>
+          <li><label for="tell">연락처</label><input type="text" name="tell" id="tell" value=""></li>
+          <li><label for="email">이메일</label><input type="text" name="email" id="email" value=""></li>
+          <li style="width:80% "><label for="title">제목</label><input type="text" name="title" id="title" value="" style="width:300px "></li>
+          <li style="width:100% "><label for="content" >내용</label><textarea name="content" rows="8" cols="80"></textarea></li>
+          <li style="width:100%;"><input type="submit" class="submit" name="submit" value="문의하기"></li>
+      </form>
+        <div class="inputbox_back"> </div>
+      </div>
+    </div>
+
+  </div>
+</div><!--//contentwrap-->
+<style>
+
+.submit{
+  margin: 0 auto; width:150px; height:40px; border-radius:10px; background:#000!important; border:1px solid #eee; color:#fff;display: block;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{background: #fff!important;}
+input{background: #fff ;border-radius: 5px;}
+.inputbox_back{width: 100%; height: 100%;  background: #fff; opacity: 0.9;position: absolute; z-index: -1; top:0;margin-left: -50px}
+.inputbox{width: 600px; height: 450px; margin: 50px auto; padding: 50px; margin-top: 250px; position: relative; z-index: 19990;}
+.inputbox form{ width: 100%; height: 100%; margin: 0 auto; }
+.inputbox input{width: 180px;}
+.inputbox li{float: left; width: 50%;margin-top: 20px;}
+.inputbox li label{width: 100px; display: inline-block; font-weight: bold; font-size: 16px;}
+.inputbox li textarea{width: 450px; vertical-align: middle;}
+.subwrap{
+    position: absolute;
+    width: 100% !important;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    background-position: 50%;}
+#bottom {
+	width:100%;
+	position: fixed;
+	height: 60px;
+	z-index: 1001;
+	min-width:1200px;
+	margin:0 auto;
+	bottom: 0;
+	font-size: 12px;
+	line-height: 30px;
+	color: #999999;
+	font-weight: 600;
+}
+#bottom .text{
+	border-top:1px solid #d01c24;
+	text-align: left;
+	width:1200px;
+	margin:0 auto;
+}
+</style>
+<div id="bottom" >
+		<div class="text"><span>2017 DRT.NARU</span> <span style="color:red; margin-left:10px;">RECRUIT</span></div>
+</div>
+<script src="./js/skrollr.js"></script>
+<script src="./js/waypoints.min.js"></script>
+<script src="./js/Timer.js"></script>
+
+<script>
+var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1},c:2};
+function $buo_f(){
+ var e = document.createElement("script");
+ e.src = "//browser-update.org/update.js";
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+ <script>
+    $('body').show();
+
+  //  $('.version').text(NProgress.version);
+
+    NProgress.start();
+
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); },100);
+
+    $('input, textarea').placeholder();
+
+
+
+  </script>
+
+</div>
+</body>
+</html>
